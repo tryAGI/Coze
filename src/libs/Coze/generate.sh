@@ -3,7 +3,7 @@ set -euo pipefail
 
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl -o openapi.yaml https://raw.githubusercontent.com/coze-dev/coze-sdk-gen/main/coze-openapi.yaml
+curl --fail --silent --show-error -o openapi.yaml https://raw.githubusercontent.com/coze-dev/coze-sdk-gen/main/coze-openapi.yaml
 
 # Fix server URL: add international endpoint as primary, keep CN as secondary
 python3 -c "
@@ -24,6 +24,3 @@ autosdk generate openapi.yaml \
   --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations
-
-# Fix: ByteArray2 TypeInfoPropertyName causes CS0117 (no ByteArray2Converter in JsonMetadataServices)
-sed -i '' 's/TypeInfoPropertyName = "ByteArray2"/TypeInfoPropertyName = "ByteArray"/g' Generated/Coze..JsonSerializerContext.g.cs
