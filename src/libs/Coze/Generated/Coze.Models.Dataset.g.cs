@@ -156,7 +156,7 @@ namespace Coze
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("storage_config")]
-        public object? StorageConfig { get; set; }
+        public global::Coze.StorageConfig? StorageConfig { get; set; }
 
         /// <summary>
         /// 更新时间，秒级时间戳
@@ -257,7 +257,7 @@ namespace Coze
             int? sliceCount,
             string? spaceId,
             int? status,
-            object? storageConfig,
+            global::Coze.StorageConfig? storageConfig,
             int? updateTime)
         {
             this.AllFileSize = allFileSize;
