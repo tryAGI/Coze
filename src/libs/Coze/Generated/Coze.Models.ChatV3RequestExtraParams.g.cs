@@ -1,0 +1,18 @@
+
+#nullable enable
+
+namespace Coze
+{
+    /// <summary>
+    /// 透传参数到 plugin/workflow 等下游
+    /// </summary>
+    public sealed partial class ChatV3RequestExtraParams
+    {
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+    }
+}

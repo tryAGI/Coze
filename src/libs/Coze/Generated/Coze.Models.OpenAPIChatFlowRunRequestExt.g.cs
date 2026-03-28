@@ -1,0 +1,18 @@
+
+#nullable enable
+
+namespace Coze
+{
+    /// <summary>
+    /// 用于指定一些额外的字段，例如经纬度、用户ID等
+    /// </summary>
+    public sealed partial class OpenAPIChatFlowRunRequestExt
+    {
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+    }
+}

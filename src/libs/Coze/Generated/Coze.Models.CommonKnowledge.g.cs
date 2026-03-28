@@ -1,0 +1,45 @@
+
+#nullable enable
+
+namespace Coze
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class CommonKnowledge
+    {
+        /// <summary>
+        /// 知识库信息
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("knowledge_infos")]
+        public global::System.Collections.Generic.IList<global::Coze.KnowledgeInfo>? KnowledgeInfos { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonKnowledge" /> class.
+        /// </summary>
+        /// <param name="knowledgeInfos">
+        /// 知识库信息
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public CommonKnowledge(
+            global::System.Collections.Generic.IList<global::Coze.KnowledgeInfo>? knowledgeInfos)
+        {
+            this.KnowledgeInfos = knowledgeInfos;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonKnowledge" /> class.
+        /// </summary>
+        public CommonKnowledge()
+        {
+        }
+    }
+}
