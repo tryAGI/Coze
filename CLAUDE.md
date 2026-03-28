@@ -30,7 +30,6 @@ Official: `https://raw.githubusercontent.com/coze-dev/coze-sdk-gen/main/coze-ope
 
 ## Spec Fixes (in generate.sh)
 1. **Server URL**: Adds `api.coze.com` (international) as primary server alongside `api.coze.cn` (China)
-2. **ByteArray2 fix**: Renames duplicate `TypeInfoPropertyName = "ByteArray2"` to `"ByteArray"` to fix CS0117
 
 ## API Categories (82 operations)
 - **Chat** (v3): Send messages, stream responses, cancel, submit tool outputs
