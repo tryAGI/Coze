@@ -36,9 +36,9 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatSDKRequestAuth" /> class.
         /// </summary>
+        /// <param name="type"></param>
         /// <param name="onRefreshToken"></param>
         /// <param name="token"></param>
-        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -47,9 +47,9 @@ namespace Coze
             string? onRefreshToken,
             string? token)
         {
-            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
             this.OnRefreshToken = onRefreshToken;
             this.Token = token;
+            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
         }
 
         /// <summary>

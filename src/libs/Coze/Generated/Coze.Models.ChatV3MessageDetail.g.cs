@@ -108,13 +108,13 @@ namespace Coze
         /// <param name="content"></param>
         /// <param name="contentType"></param>
         /// <param name="conversationId"></param>
-        /// <param name="createdAt"></param>
         /// <param name="id"></param>
+        /// <param name="role"></param>
+        /// <param name="type"></param>
+        /// <param name="createdAt"></param>
         /// <param name="metaData"></param>
         /// <param name="reasoningContent"></param>
-        /// <param name="role"></param>
         /// <param name="sectionId"></param>
-        /// <param name="type"></param>
         /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -139,13 +139,13 @@ namespace Coze
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.ContentType = contentType ?? throw new global::System.ArgumentNullException(nameof(contentType));
             this.ConversationId = conversationId ?? throw new global::System.ArgumentNullException(nameof(conversationId));
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
-            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
             this.CreatedAt = createdAt;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.MetaData = metaData;
             this.ReasoningContent = reasoningContent;
+            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
             this.SectionId = sectionId;
+            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
             this.UpdatedAt = updatedAt;
         }
 

@@ -53,9 +53,9 @@ namespace Coze
         /// </summary>
         /// <param name="appInfo"></param>
         /// <param name="botId"></param>
+        /// <param name="type"></param>
         /// <param name="botInfo"></param>
         /// <param name="isIframe"></param>
-        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -68,9 +68,9 @@ namespace Coze
         {
             this.AppInfo = appInfo ?? throw new global::System.ArgumentNullException(nameof(appInfo));
             this.BotId = botId ?? throw new global::System.ArgumentNullException(nameof(botId));
-            this.Type = type;
             this.BotInfo = botInfo;
             this.IsIframe = isIframe;
+            this.Type = type;
         }
 
         /// <summary>

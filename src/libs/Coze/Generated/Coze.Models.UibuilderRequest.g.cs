@@ -50,8 +50,8 @@ namespace Coze
         /// Initializes a new instance of the <see cref="UibuilderRequest" /> class.
         /// </summary>
         /// <param name="appId"></param>
-        /// <param name="container"></param>
         /// <param name="token"></param>
+        /// <param name="container"></param>
         /// <param name="ui"></param>
         /// <param name="userInfo"></param>
 #if NET7_0_OR_GREATER
@@ -65,8 +65,8 @@ namespace Coze
             global::Coze.UibuilderRequestUserInfo? userInfo)
         {
             this.AppId = appId ?? throw new global::System.ArgumentNullException(nameof(appId));
-            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
             this.Container = container;
+            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
             this.Ui = ui;
             this.UserInfo = userInfo;
         }

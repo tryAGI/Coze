@@ -58,11 +58,11 @@ namespace Coze
         /// Initializes a new instance of the <see cref="ApiAppOpenV2" /> class.
         /// </summary>
         /// <param name="appType"></param>
+        /// <param name="id"></param>
+        /// <param name="verifyToken"></param>
         /// <param name="callbackUrl"></param>
         /// <param name="connectorId"></param>
-        /// <param name="id"></param>
         /// <param name="name"></param>
-        /// <param name="verifyToken"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -75,11 +75,11 @@ namespace Coze
             string? name)
         {
             this.AppType = appType;
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.VerifyToken = verifyToken ?? throw new global::System.ArgumentNullException(nameof(verifyToken));
             this.CallbackUrl = callbackUrl;
             this.ConnectorId = connectorId;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name;
+            this.VerifyToken = verifyToken ?? throw new global::System.ArgumentNullException(nameof(verifyToken));
         }
 
         /// <summary>

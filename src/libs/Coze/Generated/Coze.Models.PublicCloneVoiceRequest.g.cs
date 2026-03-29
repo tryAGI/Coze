@@ -81,9 +81,6 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="PublicCloneVoiceRequest" /> class.
         /// </summary>
-        /// <param name="audio">
-        /// 音频格式支持：wav、mp3、ogg、m4a、aac、pcm，其中pcm仅支持24k 单通道目前限制单文件上传最大10MB，每次最多上传1个音频文件
-        /// </param>
         /// <param name="audioFormat">
         /// 传入文件的音频格式，例如 pcm, m4a, mp3
         /// </param>
@@ -92,6 +89,12 @@ namespace Coze
         /// </param>
         /// <param name="filename">
         /// 音频文件，应使用 multipart/form-data 方式上传文件。
+        /// </param>
+        /// <param name="voiceName">
+        /// 音色名
+        /// </param>
+        /// <param name="audio">
+        /// 音频格式支持：wav、mp3、ogg、m4a、aac、pcm，其中pcm仅支持24k 单通道目前限制单文件上传最大10MB，每次最多上传1个音频文件
         /// </param>
         /// <param name="language"></param>
         /// <param name="previewText">
@@ -105,9 +108,6 @@ namespace Coze
         /// </param>
         /// <param name="voiceId">
         /// 如果有，则使用此 voice_id 进行训练覆盖，否则使用新的 voice_id 进行训练
-        /// </param>
-        /// <param name="voiceName">
-        /// 音色名
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -124,16 +124,16 @@ namespace Coze
             string? text,
             string? voiceId)
         {
+            this.Audio = audio;
             this.AudioFormat = audioFormat ?? throw new global::System.ArgumentNullException(nameof(audioFormat));
             this.File = file ?? throw new global::System.ArgumentNullException(nameof(file));
             this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
-            this.VoiceName = voiceName ?? throw new global::System.ArgumentNullException(nameof(voiceName));
-            this.Audio = audio;
             this.Language = language;
             this.PreviewText = previewText;
             this.SpaceId = spaceId;
             this.Text = text;
             this.VoiceId = voiceId;
+            this.VoiceName = voiceName ?? throw new global::System.ArgumentNullException(nameof(voiceName));
         }
 
         /// <summary>

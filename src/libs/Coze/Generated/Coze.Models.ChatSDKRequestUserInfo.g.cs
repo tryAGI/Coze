@@ -37,9 +37,9 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatSDKRequestUserInfo" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="nickname"></param>
         /// <param name="url"></param>
+        /// <param name="id"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -48,9 +48,9 @@ namespace Coze
             string url,
             string? id)
         {
+            this.Id = id;
             this.Nickname = nickname ?? throw new global::System.ArgumentNullException(nameof(nickname));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.Id = id;
         }
 
         /// <summary>

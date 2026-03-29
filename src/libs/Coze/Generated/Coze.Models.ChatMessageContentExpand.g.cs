@@ -31,8 +31,8 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessageContentExpand" /> class.
         /// </summary>
-        /// <param name="info"></param>
         /// <param name="type"></param>
+        /// <param name="info"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace Coze
             global::Coze.ChatMessageContentExpandType type,
             string? info)
         {
-            this.Type = type;
             this.Info = info;
+            this.Type = type;
         }
 
         /// <summary>

@@ -75,6 +75,12 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="PublicAudioSpeechRequest" /> class.
         /// </summary>
+        /// <param name="input">
+        /// 必选，合成语音的文本，长度限制 1024 字节（UTF-8编码）。
+        /// </param>
+        /// <param name="voiceId">
+        /// 必选，音色id
+        /// </param>
         /// <param name="contextTexts">
         /// 语音合成辅助信息
         /// </param>
@@ -83,9 +89,6 @@ namespace Coze
         /// </param>
         /// <param name="emotionScale">
         /// 情绪值，[1,5]，默认 4
-        /// </param>
-        /// <param name="input">
-        /// 必选，合成语音的文本，长度限制 1024 字节（UTF-8编码）。
         /// </param>
         /// <param name="loudnessRate">
         /// 音量，[-50,100]，默认 0
@@ -98,9 +101,6 @@ namespace Coze
         /// </param>
         /// <param name="speed">
         /// 语速，[0.2,3]，默认为1，通常保留一位小数即可
-        /// </param>
-        /// <param name="voiceId">
-        /// 必选，音色id
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -116,15 +116,15 @@ namespace Coze
             int? sampleRate,
             double? speed)
         {
-            this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
-            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.ContextTexts = contextTexts;
             this.Emotion = emotion;
             this.EmotionScale = emotionScale;
+            this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
             this.LoudnessRate = loudnessRate;
             this.ResponseFormat = responseFormat;
             this.SampleRate = sampleRate;
             this.Speed = speed;
+            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
         }
 
         /// <summary>

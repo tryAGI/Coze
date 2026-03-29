@@ -30,10 +30,10 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="RegenerateParam" /> class.
         /// </summary>
+        /// <param name="messageId"></param>
         /// <param name="chatId">
         /// 对于 openapi 来说，这个字段是必传的。但是这里为了兼容老版本，所以设置为可选
         /// </param>
-        /// <param name="messageId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -41,8 +41,8 @@ namespace Coze
             string messageId,
             string? chatId)
         {
-            this.MessageId = messageId ?? throw new global::System.ArgumentNullException(nameof(messageId));
             this.ChatId = chatId;
+            this.MessageId = messageId ?? throw new global::System.ArgumentNullException(nameof(messageId));
         }
 
         /// <summary>

@@ -98,9 +98,10 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatV3Request" /> class.
         /// </summary>
+        /// <param name="botId"></param>
+        /// <param name="userId"></param>
         /// <param name="additionalMessages"></param>
         /// <param name="autoSaveHistory"></param>
-        /// <param name="botId"></param>
         /// <param name="botVersion">
         /// 指定 bot 版本；不传取最新版本；publish_status=unpublished_draft 时此参数无效
         /// </param>
@@ -118,7 +119,6 @@ namespace Coze
         /// </param>
         /// <param name="shortcutCommand"></param>
         /// <param name="stream"></param>
-        /// <param name="userId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -137,10 +137,9 @@ namespace Coze
             global::Coze.ShortcutCommandDetail? shortcutCommand,
             bool? stream)
         {
-            this.BotId = botId ?? throw new global::System.ArgumentNullException(nameof(botId));
-            this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
             this.AdditionalMessages = additionalMessages;
             this.AutoSaveHistory = autoSaveHistory;
+            this.BotId = botId ?? throw new global::System.ArgumentNullException(nameof(botId));
             this.BotVersion = botVersion;
             this.CustomVariables = customVariables;
             this.EnableCard = enableCard;
@@ -150,6 +149,7 @@ namespace Coze
             this.PublishStatus = publishStatus;
             this.ShortcutCommand = shortcutCommand;
             this.Stream = stream;
+            this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
         }
 
         /// <summary>

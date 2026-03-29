@@ -38,8 +38,8 @@ namespace Coze
         /// Initializes a new instance of the <see cref="ChatSDKRequestConfigAppInfo" /> class.
         /// </summary>
         /// <param name="appId"></param>
-        /// <param name="parameters"></param>
         /// <param name="workflowId"></param>
+        /// <param name="parameters"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -49,8 +49,8 @@ namespace Coze
             object? parameters)
         {
             this.AppId = appId ?? throw new global::System.ArgumentNullException(nameof(appId));
-            this.WorkflowId = workflowId ?? throw new global::System.ArgumentNullException(nameof(workflowId));
             this.Parameters = parameters;
+            this.WorkflowId = workflowId ?? throw new global::System.ArgumentNullException(nameof(workflowId));
         }
 
         /// <summary>

@@ -50,10 +50,10 @@ namespace Coze
         /// 内容
         /// </param>
         /// <param name="contentType"></param>
-        /// <param name="metaData"></param>
         /// <param name="role">
         /// 已TODO 字段打平
         /// </param>
+        /// <param name="metaData"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -65,8 +65,8 @@ namespace Coze
         {
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.ContentType = contentType;
-            this.Role = role;
             this.MetaData = metaData;
+            this.Role = role;
         }
 
         /// <summary>
