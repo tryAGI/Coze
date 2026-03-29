@@ -36,9 +36,9 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateDatasetOpenAPIRequest" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="description"></param>
         /// <param name="fileId"></param>
-        /// <param name="name"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -47,9 +47,9 @@ namespace Coze
             string? description,
             string? fileId)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.FileId = fileId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
         }
 
         /// <summary>

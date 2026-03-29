@@ -49,11 +49,11 @@ namespace Coze
         /// 调用状态码。0 表示调用成功，其他值表示调用失败，你可以通过 msg 字段判断详细的错误原因。
         /// </param>
         /// <param name="data"></param>
-        /// <param name="detail"></param>
         /// <param name="msg">
         /// 状态信息。API 调用失败时可通过此字段查看详细错误信息。<br/>
         /// 状态码为 0 时，msg 默认为空。
         /// </param>
+        /// <param name="detail"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -65,8 +65,8 @@ namespace Coze
         {
             this.Code = code;
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
-            this.Msg = msg ?? throw new global::System.ArgumentNullException(nameof(msg));
             this.Detail = detail;
+            this.Msg = msg ?? throw new global::System.ArgumentNullException(nameof(msg));
         }
 
         /// <summary>

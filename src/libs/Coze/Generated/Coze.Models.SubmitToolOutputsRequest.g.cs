@@ -30,8 +30,8 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="SubmitToolOutputsRequest" /> class.
         /// </summary>
-        /// <param name="stream"></param>
         /// <param name="toolOutputs"></param>
+        /// <param name="stream"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -39,8 +39,8 @@ namespace Coze
             global::System.Collections.Generic.IList<global::Coze.ToolOutput> toolOutputs,
             bool? stream)
         {
-            this.ToolOutputs = toolOutputs ?? throw new global::System.ArgumentNullException(nameof(toolOutputs));
             this.Stream = stream;
+            this.ToolOutputs = toolOutputs ?? throw new global::System.ArgumentNullException(nameof(toolOutputs));
         }
 
         /// <summary>

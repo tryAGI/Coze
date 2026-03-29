@@ -49,17 +49,17 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenCreateSpaceRequest" /> class.
         /// </summary>
-        /// <param name="cozeAccountId">
-        /// 组织id
-        /// </param>
         /// <param name="description">
         /// 空间描述
         /// </param>
-        /// <param name="iconFileId">
-        /// 空间图标，通过上传接口https://www.coze.cn/open/docs/developer_guides/upload_files，未指定文件ID则使用默认头像
-        /// </param>
         /// <param name="name">
         /// 空间名称
+        /// </param>
+        /// <param name="cozeAccountId">
+        /// 组织id
+        /// </param>
+        /// <param name="iconFileId">
+        /// 空间图标，通过上传接口https://www.coze.cn/open/docs/developer_guides/upload_files，未指定文件ID则使用默认头像
         /// </param>
         /// <param name="ownerUid">
         /// 空间所有者id，不传则为当前用户
@@ -74,10 +74,10 @@ namespace Coze
             string? iconFileId,
             string? ownerUid)
         {
-            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.CozeAccountId = cozeAccountId;
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
             this.IconFileId = iconFileId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.OwnerUid = ownerUid;
         }
 

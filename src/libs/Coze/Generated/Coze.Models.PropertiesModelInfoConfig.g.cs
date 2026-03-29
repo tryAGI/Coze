@@ -104,6 +104,9 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertiesModelInfoConfig" /> class.
         /// </summary>
+        /// <param name="modelId">
+        /// 模型id
+        /// </param>
         /// <param name="apiMode">
         /// 模型的API协议
         /// </param>
@@ -118,9 +121,6 @@ namespace Coze
         /// </param>
         /// <param name="maxTokens">
         /// 最大回复长度
-        /// </param>
-        /// <param name="modelId">
-        /// 模型id
         /// </param>
         /// <param name="parameters">
         /// 模型个性化配置参数
@@ -165,12 +165,12 @@ namespace Coze
             int? topK,
             double? topP)
         {
-            this.ModelId = modelId ?? throw new global::System.ArgumentNullException(nameof(modelId));
             this.ApiMode = apiMode;
             this.CacheType = cacheType;
             this.ContextRound = contextRound;
             this.FrequencyPenalty = frequencyPenalty;
             this.MaxTokens = maxTokens;
+            this.ModelId = modelId ?? throw new global::System.ArgumentNullException(nameof(modelId));
             this.Parameters = parameters;
             this.PresencePenalty = presencePenalty;
             this.ResponseFormat = responseFormat;

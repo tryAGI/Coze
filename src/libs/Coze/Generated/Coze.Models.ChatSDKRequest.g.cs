@@ -44,10 +44,10 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatSDKRequest" /> class.
         /// </summary>
-        /// <param name="auth"></param>
         /// <param name="config"></param>
         /// <param name="ui"></param>
         /// <param name="userInfo"></param>
+        /// <param name="auth"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,10 +57,10 @@ namespace Coze
             global::Coze.ChatSDKRequestUserInfo userInfo,
             global::Coze.ChatSDKRequestAuth? auth)
         {
+            this.Auth = auth;
             this.Config = config ?? throw new global::System.ArgumentNullException(nameof(config));
             this.Ui = ui ?? throw new global::System.ArgumentNullException(nameof(ui));
             this.UserInfo = userInfo ?? throw new global::System.ArgumentNullException(nameof(userInfo));
-            this.Auth = auth;
         }
 
         /// <summary>

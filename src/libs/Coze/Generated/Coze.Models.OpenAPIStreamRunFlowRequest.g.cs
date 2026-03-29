@@ -60,6 +60,9 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAPIStreamRunFlowRequest" /> class.
         /// </summary>
+        /// <param name="workflowId">
+        /// required, 待执行的 Workflow ID，此工作流应已发布
+        /// </param>
         /// <param name="appId">
         /// 该工作流关联的应用的 ID
         /// </param>
@@ -74,9 +77,6 @@ namespace Coze
         /// </param>
         /// <param name="parameters">
         /// 工作流开始节点的输入参数及取值 (JSON 序列化字符串)
-        /// </param>
-        /// <param name="workflowId">
-        /// required, 待执行的 Workflow ID，此工作流应已发布
         /// </param>
         /// <param name="workflowVersion">
         /// 资源库工作流版本，只有运行工作流为资源库内工作流时可以传值，不传默认使用最新版本
@@ -93,12 +93,12 @@ namespace Coze
             object? parameters,
             string? workflowVersion)
         {
-            this.WorkflowId = workflowId ?? throw new global::System.ArgumentNullException(nameof(workflowId));
             this.AppId = appId;
             this.BotId = botId;
             this.ConnectorId = connectorId;
             this.Ext = ext;
             this.Parameters = parameters;
+            this.WorkflowId = workflowId ?? throw new global::System.ArgumentNullException(nameof(workflowId));
             this.WorkflowVersion = workflowVersion;
         }
 

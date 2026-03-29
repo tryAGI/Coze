@@ -58,10 +58,6 @@ namespace Coze
         /// <param name="content">
         /// 如果是非 text，需要解析 JSON
         /// </param>
-        /// <param name="contentType">
-        /// text, card, object_string
-        /// </param>
-        /// <param name="metaData"></param>
         /// <param name="role">
         /// user / assistant
         /// </param>
@@ -70,6 +66,10 @@ namespace Coze
         ///  用户输入时可用：function_call，tool_output<br/>
         ///  不支持用户输入使用：follow_up，knowledge，verbose，answer
         /// </param>
+        /// <param name="contentType">
+        /// text, card, object_string
+        /// </param>
+        /// <param name="metaData"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -81,10 +81,10 @@ namespace Coze
             global::System.Collections.Generic.Dictionary<string, string>? metaData)
         {
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
-            this.Role = role;
-            this.Type = type;
             this.ContentType = contentType;
             this.MetaData = metaData;
+            this.Role = role;
+            this.Type = type;
         }
 
         /// <summary>

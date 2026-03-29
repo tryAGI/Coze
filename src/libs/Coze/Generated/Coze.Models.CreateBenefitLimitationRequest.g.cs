@@ -38,8 +38,8 @@ namespace Coze
         /// Initializes a new instance of the <see cref="CreateBenefitLimitationRequest" /> class.
         /// </summary>
         /// <param name="benefitInfo"></param>
-        /// <param name="entityId"></param>
         /// <param name="entityType"></param>
+        /// <param name="entityId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -49,8 +49,8 @@ namespace Coze
             string? entityId)
         {
             this.BenefitInfo = benefitInfo ?? throw new global::System.ArgumentNullException(nameof(benefitInfo));
-            this.EntityType = entityType ?? throw new global::System.ArgumentNullException(nameof(entityType));
             this.EntityId = entityId;
+            this.EntityType = entityType ?? throw new global::System.ArgumentNullException(nameof(entityType));
         }
 
         /// <summary>

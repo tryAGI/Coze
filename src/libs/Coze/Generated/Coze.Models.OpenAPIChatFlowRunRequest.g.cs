@@ -77,6 +77,12 @@ namespace Coze
         /// <param name="additionalMessages">
         /// required 对话中用户问题和历史消息
         /// </param>
+        /// <param name="parameters">
+        /// required 设置对话流输入参数中的自定义参数 (map[String]any)
+        /// </param>
+        /// <param name="workflowId">
+        /// required 待执行的对话流 ID，此对话流应已发布
+        /// </param>
         /// <param name="appId">
         /// 需要关联的扣子应用 ID
         /// </param>
@@ -91,12 +97,6 @@ namespace Coze
         /// </param>
         /// <param name="ext">
         /// 用于指定一些额外的字段，例如经纬度、用户ID等
-        /// </param>
-        /// <param name="parameters">
-        /// required 设置对话流输入参数中的自定义参数 (map[String]any)
-        /// </param>
-        /// <param name="workflowId">
-        /// required 待执行的对话流 ID，此对话流应已发布
         /// </param>
         /// <param name="workflowVersion">
         /// 资源库工作流版本，只有运行工作流为资源库内工作流时可以传值，不传默认使用最新版本
@@ -116,13 +116,13 @@ namespace Coze
             string? workflowVersion)
         {
             this.AdditionalMessages = additionalMessages ?? throw new global::System.ArgumentNullException(nameof(additionalMessages));
-            this.Parameters = parameters ?? throw new global::System.ArgumentNullException(nameof(parameters));
-            this.WorkflowId = workflowId ?? throw new global::System.ArgumentNullException(nameof(workflowId));
             this.AppId = appId;
             this.BotId = botId;
             this.ConnectorId = connectorId;
             this.ConversationId = conversationId;
             this.Ext = ext;
+            this.Parameters = parameters ?? throw new global::System.ArgumentNullException(nameof(parameters));
+            this.WorkflowId = workflowId ?? throw new global::System.ArgumentNullException(nameof(workflowId));
             this.WorkflowVersion = workflowVersion;
         }
 

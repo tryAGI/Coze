@@ -94,16 +94,16 @@ namespace Coze
         /// Initializes a new instance of the <see cref="ChatV3ChatDetail" /> class.
         /// </summary>
         /// <param name="botId"></param>
-        /// <param name="completedAt"></param>
         /// <param name="conversationId"></param>
+        /// <param name="id"></param>
+        /// <param name="status"></param>
+        /// <param name="completedAt"></param>
         /// <param name="createdAt"></param>
         /// <param name="failedAt"></param>
-        /// <param name="id"></param>
         /// <param name="lastError"></param>
         /// <param name="metaData"></param>
         /// <param name="requiredAction"></param>
         /// <param name="sectionId"></param>
-        /// <param name="status"></param>
         /// <param name="usage"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -123,16 +123,16 @@ namespace Coze
             global::Coze.Usage2? usage)
         {
             this.BotId = botId ?? throw new global::System.ArgumentNullException(nameof(botId));
-            this.ConversationId = conversationId ?? throw new global::System.ArgumentNullException(nameof(conversationId));
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.CompletedAt = completedAt;
+            this.ConversationId = conversationId ?? throw new global::System.ArgumentNullException(nameof(conversationId));
             this.CreatedAt = createdAt;
             this.FailedAt = failedAt;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.LastError = lastError;
             this.MetaData = metaData;
             this.RequiredAction = requiredAction;
             this.SectionId = sectionId;
+            this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.Usage = usage;
         }
 

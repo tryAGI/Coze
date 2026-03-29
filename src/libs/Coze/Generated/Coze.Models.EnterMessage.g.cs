@@ -48,6 +48,7 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="EnterMessage" /> class.
         /// </summary>
+        /// <param name="role"></param>
         /// <param name="content">
         /// 内容
         /// </param>
@@ -55,7 +56,6 @@ namespace Coze
         /// text/card/object_string
         /// </param>
         /// <param name="metaData"></param>
-        /// <param name="role"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -67,10 +67,10 @@ namespace Coze
             global::System.Collections.Generic.Dictionary<string, string>? metaData,
             string? type)
         {
-            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
             this.Content = content;
             this.ContentType = contentType;
             this.MetaData = metaData;
+            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
             this.Type = type;
         }
 

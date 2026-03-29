@@ -85,17 +85,17 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateDraftBotRequest" /> class.
         /// </summary>
+        /// <param name="name"></param>
+        /// <param name="spaceId"></param>
         /// <param name="description"></param>
         /// <param name="iconFileId">
         /// 头像文件id
         /// </param>
         /// <param name="mediaConfig"></param>
         /// <param name="modelInfoConfig"></param>
-        /// <param name="name"></param>
         /// <param name="onboardingInfo"></param>
         /// <param name="pluginIdList"></param>
         /// <param name="promptInfo"></param>
-        /// <param name="spaceId"></param>
         /// <param name="suggestReplyInfo"></param>
         /// <param name="workflowIdList"></param>
 #if NET7_0_OR_GREATER
@@ -114,15 +114,15 @@ namespace Coze
             global::Coze.PropertiesSuggestReplyInfo? suggestReplyInfo,
             global::Coze.PropertiesWorkflowIdList? workflowIdList)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.SpaceId = spaceId ?? throw new global::System.ArgumentNullException(nameof(spaceId));
             this.Description = description;
             this.IconFileId = iconFileId;
             this.MediaConfig = mediaConfig;
             this.ModelInfoConfig = modelInfoConfig;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.OnboardingInfo = onboardingInfo;
             this.PluginIdList = pluginIdList;
             this.PromptInfo = promptInfo;
+            this.SpaceId = spaceId ?? throw new global::System.ArgumentNullException(nameof(spaceId));
             this.SuggestReplyInfo = suggestReplyInfo;
             this.WorkflowIdList = workflowIdList;
         }

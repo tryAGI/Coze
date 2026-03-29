@@ -43,11 +43,11 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentBase" /> class.
         /// </summary>
+        /// <param name="name"></param>
+        /// <param name="sourceInfo"></param>
         /// <param name="caption">
         /// 图片类型，人工标注时的图片描述，目前只支持openapi调用
         /// </param>
-        /// <param name="name"></param>
-        /// <param name="sourceInfo"></param>
         /// <param name="updateRule"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -58,9 +58,9 @@ namespace Coze
             string? caption,
             global::Coze.UpdateRule? updateRule)
         {
+            this.Caption = caption;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SourceInfo = sourceInfo ?? throw new global::System.ArgumentNullException(nameof(sourceInfo));
-            this.Caption = caption;
             this.UpdateRule = updateRule;
         }
 

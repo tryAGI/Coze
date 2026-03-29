@@ -37,9 +37,9 @@ namespace Coze
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAPICreateOrganizationRequest" /> class.
         /// </summary>
-        /// <param name="description"></param>
         /// <param name="name"></param>
         /// <param name="superAdminUserId"></param>
+        /// <param name="description"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -48,9 +48,9 @@ namespace Coze
             string superAdminUserId,
             string? description)
         {
+            this.Description = description;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SuperAdminUserId = superAdminUserId ?? throw new global::System.ArgumentNullException(nameof(superAdminUserId));
-            this.Description = description;
         }
 
         /// <summary>
