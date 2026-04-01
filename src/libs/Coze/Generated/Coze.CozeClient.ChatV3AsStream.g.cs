@@ -34,7 +34,6 @@ namespace Coze
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
-
             request = new global::Coze.ChatV3Request
             {
                 AdditionalMessages = request.AdditionalMessages,
