@@ -14,4 +14,9 @@ public partial class Tests
         
         return client;
     }
+
+    private static string GetBotId() =>
+        Environment.GetEnvironmentVariable("COZE_BOT_ID") is { Length: > 0 } botId
+            ? botId
+            : throw new AssertInconclusiveException("COZE_BOT_ID environment variable is not found.");
 }

@@ -1,7 +1,13 @@
 site_name: Coze .NET Documentation
 nav:
 - Overview: index.md
+- Guides:
+  - Microsoft.Extensions.AI: guides/meai.md
 # EXAMPLES:START
+- Examples:
+  - Generate: examples/generate.md
+  - Bots: examples/bots.md
+  - Workflows: examples/workflows.md
 # EXAMPLES:END
         
 theme:
