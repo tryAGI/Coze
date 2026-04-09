@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_SubmitToolOutputsAsStreamSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_SubmitToolOutputsAsStreamSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_SubmitToolOutputsAsStreamSecurityRequirement0,
+            };
         partial void PrepareSubmitToolOutputsAsStreamArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string conversationId,
@@ -51,13 +70,19 @@ namespace Coze
                 chatId: ref chatId,
                 request: request);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_SubmitToolOutputsAsStreamSecurityRequirements,
+                operationName: "SubmitToolOutputsAsStreamAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: "/v3/chat/submit_tool_outputs",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("conversation_id", conversationId)
                 .AddRequiredParameter("chat_id", chatId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -67,7 +92,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

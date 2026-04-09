@@ -12,7 +12,7 @@ namespace Coze
         /// <summary>
         /// International
         /// </summary>
-        public const string DefaultBaseUrl = "https://api.coze.com";
+        public const string DefaultBaseUrl = "https://api.coze.com/";
 
         private bool _disposeHttpClient = true;
 

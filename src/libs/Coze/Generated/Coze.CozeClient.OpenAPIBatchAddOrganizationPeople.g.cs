@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_OpenAPIBatchAddOrganizationPeopleSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_OpenAPIBatchAddOrganizationPeopleSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_OpenAPIBatchAddOrganizationPeopleSecurityRequirement0,
+            };
         partial void PrepareOpenAPIBatchAddOrganizationPeopleArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string organizationId,
@@ -46,9 +65,15 @@ namespace Coze
                 organizationId: ref organizationId,
                 request: request);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_OpenAPIBatchAddOrganizationPeopleSecurityRequirements,
+                operationName: "OpenAPIBatchAddOrganizationPeopleAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: $"/v1/organizations/{organizationId}/members",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -58,7 +83,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

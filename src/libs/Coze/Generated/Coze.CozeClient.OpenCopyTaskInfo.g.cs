@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_OpenCopyTaskInfoSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_OpenCopyTaskInfoSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_OpenCopyTaskInfoSecurityRequirement0,
+            };
         partial void PrepareOpenCopyTaskInfoArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string taskId);
@@ -38,9 +57,15 @@ namespace Coze
                 httpClient: HttpClient,
                 taskId: ref taskId);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_OpenCopyTaskInfoSecurityRequirements,
+                operationName: "OpenCopyTaskInfoAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: $"/v1/entities/copy_tasks/{taskId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -50,7 +75,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

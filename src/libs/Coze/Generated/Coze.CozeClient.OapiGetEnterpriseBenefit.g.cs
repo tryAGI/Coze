@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_OapiGetEnterpriseBenefitSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_OapiGetEnterpriseBenefitSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_OapiGetEnterpriseBenefitSecurityRequirement0,
+            };
         partial void PrepareOapiGetEnterpriseBenefitArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Collections.Generic.IList<string>? benefitTypeList,
@@ -43,13 +62,19 @@ namespace Coze
                 benefitTypeList: benefitTypeList,
                 resourceId: ref resourceId);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_OapiGetEnterpriseBenefitSecurityRequirements,
+                operationName: "OapiGetEnterpriseBenefitAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: "/v1/commerce/benefit/benefits/get",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("benefit_type_list", benefitTypeList, delimiter: ",", explode: true)
                 .AddOptionalParameter("resource_id", resourceId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -59,7 +84,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

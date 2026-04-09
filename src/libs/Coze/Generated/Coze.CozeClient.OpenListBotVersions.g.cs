@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_OpenListBotVersionsSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_OpenListBotVersionsSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_OpenListBotVersionsSecurityRequirement0,
+            };
         partial void PrepareOpenListBotVersionsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? pageNum,
@@ -58,6 +77,12 @@ namespace Coze
                 connectorId: ref connectorId,
                 botId: ref botId);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_OpenListBotVersionsSecurityRequirements,
+                operationName: "OpenListBotVersionsAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: $"/v1/bots/{botId}/versions",
                 baseUri: HttpClient.BaseAddress); 
@@ -66,7 +91,7 @@ namespace Coze
                 .AddOptionalParameter("page_size", pageSize?.ToString())
                 .AddOptionalParameter("publish_status", publishStatus?.ToValueString())
                 .AddOptionalParameter("connector_id", connectorId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -76,7 +101,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
