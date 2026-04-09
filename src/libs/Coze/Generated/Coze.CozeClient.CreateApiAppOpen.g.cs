@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_CreateApiAppOpenSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_CreateApiAppOpenSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_CreateApiAppOpenSecurityRequirement0,
+            };
         partial void PrepareCreateApiAppOpenArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Coze.CreateApiAppOpenRequest request);
@@ -41,9 +60,15 @@ namespace Coze
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateApiAppOpenSecurityRequirements,
+                operationName: "CreateApiAppOpenAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: "/v1/api_apps",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -53,7 +78,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_RetrieveMessageApiSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_RetrieveMessageApiSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_RetrieveMessageApiSecurityRequirement0,
+            };
         partial void PrepareRetrieveMessageApiArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string conversationId,
@@ -43,13 +62,19 @@ namespace Coze
                 conversationId: ref conversationId,
                 messageId: ref messageId);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_RetrieveMessageApiSecurityRequirements,
+                operationName: "RetrieveMessageApiAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: "/v1/conversation/message/retrieve",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("conversation_id", conversationId)
                 .AddRequiredParameter("message_id", messageId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -59,7 +84,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

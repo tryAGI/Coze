@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_UpdateDraftBotSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_UpdateDraftBotSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_UpdateDraftBotSecurityRequirement0,
+            };
         partial void PrepareUpdateDraftBotArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Coze.UpdateDraftBotRequest request);
@@ -41,9 +60,15 @@ namespace Coze
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_UpdateDraftBotSecurityRequirements,
+                operationName: "UpdateDraftBotAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: "/v1/bot/update",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -53,7 +78,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

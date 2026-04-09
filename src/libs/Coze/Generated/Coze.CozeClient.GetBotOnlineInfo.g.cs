@@ -5,6 +5,25 @@ namespace Coze
 {
     public partial class CozeClient
     {
+
+
+        private static readonly global::Coze.EndPointSecurityRequirement s_GetBotOnlineInfoSecurityRequirement0 =
+            new global::Coze.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Coze.EndPointAuthorizationRequirement[]
+                {                    new global::Coze.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Coze.EndPointSecurityRequirement[] s_GetBotOnlineInfoSecurityRequirements =
+            new global::Coze.EndPointSecurityRequirement[]
+            {                s_GetBotOnlineInfoSecurityRequirement0,
+            };
         partial void PrepareGetBotOnlineInfoArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string botId);
@@ -38,12 +57,18 @@ namespace Coze
                 httpClient: HttpClient,
                 botId: ref botId);
 
+
+            var __authorizations = global::Coze.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetBotOnlineInfoSecurityRequirements,
+                operationName: "GetBotOnlineInfoAsync");
+
             var __pathBuilder = new global::Coze.PathBuilder(
                 path: "/v1/bot/get_online_info",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("bot_id", botId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -53,7 +78,7 @@ namespace Coze
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
