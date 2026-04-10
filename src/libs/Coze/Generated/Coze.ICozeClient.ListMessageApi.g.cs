@@ -14,12 +14,14 @@ namespace Coze
         /// </summary>
         /// <param name="conversationId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.ListMessageApiResponse> ListMessageApiAsync(
             string conversationId,
 
             global::Coze.ListMessageApiRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 查看消息列表<br/>
@@ -45,6 +47,7 @@ namespace Coze
         /// <param name="order">
         /// 查询顺序  desc倒序 asc正序 TODO 默认倒序
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.ListMessageApiResponse> ListMessageApiAsync(
@@ -54,6 +57,7 @@ namespace Coze
             string? chatId = default,
             int? limit = default,
             global::Coze.ListMessageApiRequestOrder? order = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

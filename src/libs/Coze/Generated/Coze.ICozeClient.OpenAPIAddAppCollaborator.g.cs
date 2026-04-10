@@ -10,12 +10,14 @@ namespace Coze
         /// </summary>
         /// <param name="appId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenAPIAddAppCollaboratorResponse> OpenAPIAddAppCollaboratorAsync(
             string appId,
 
             global::Coze.OpenAPIAddAppCollaboratorRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 添加应用协作者<br/>
@@ -23,11 +25,13 @@ namespace Coze
         /// </summary>
         /// <param name="appId"></param>
         /// <param name="collaborators"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenAPIAddAppCollaboratorResponse> OpenAPIAddAppCollaboratorAsync(
             string appId,
             global::System.Collections.Generic.IList<global::Coze.PropertiesCollaboratorsItems> collaborators,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

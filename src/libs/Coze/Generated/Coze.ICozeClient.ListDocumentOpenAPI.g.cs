@@ -10,12 +10,14 @@ namespace Coze
         /// </summary>
         /// <param name="agwJsConv"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.ListDocumentOpenAPIResponse> ListDocumentOpenAPIAsync(
             global::Coze.ListDocumentOpenAPIAgwJsConv agwJsConv,
 
             global::Coze.ListDocumentOpenAPIRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 查看知识库文件列表<br/>
@@ -25,6 +27,7 @@ namespace Coze
         /// <param name="datasetId"></param>
         /// <param name="page"></param>
         /// <param name="size"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.ListDocumentOpenAPIResponse> ListDocumentOpenAPIAsync(
@@ -32,6 +35,7 @@ namespace Coze
             string datasetId,
             int? page = default,
             int? size = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

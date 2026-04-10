@@ -14,6 +14,7 @@ namespace Coze
                 {                    new global::Coze.EndPointAuthorizationRequirement
                     {
                         Type = "Http",
+                        SchemeId = "Token",
                         Location = "Header",
                         Name = "Bearer",
                         FriendlyName = "Bearer",
@@ -46,6 +47,7 @@ namespace Coze
         /// <param name="conversationId"></param>
         /// <param name="chatId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         public async global::System.Collections.Generic.IAsyncEnumerable<global::Coze.SubmitToolOutputsResponse2> SubmitToolOutputsAsStreamAsync(
@@ -53,6 +55,7 @@ namespace Coze
             string chatId,
 
             global::Coze.SubmitToolOutputsRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             [global::System.Runtime.CompilerServices.EnumeratorCancellation] global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -76,26 +79,47 @@ namespace Coze
                 securityRequirements: s_SubmitToolOutputsAsStreamSecurityRequirements,
                 operationName: "SubmitToolOutputsAsStreamAsync");
 
-            var __pathBuilder = new global::Coze.PathBuilder(
-                path: "/v3/chat/submit_tool_outputs",
-                baseUri: HttpClient.BaseAddress); 
-            __pathBuilder
-                .AddRequiredParameter("conversation_id", conversationId)
-                .AddRequiredParameter("chat_id", chatId) 
-                ;
-            var __path = __pathBuilder.ToString();
-            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Post,
-                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            using var __timeoutCancellationTokenSource = global::Coze.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken);
+            var __effectiveCancellationToken = __timeoutCancellationTokenSource?.Token ?? cancellationToken;
+            var __effectiveReadResponseAsString = global::Coze.AutoSDKRequestOptionsSupport.GetReadResponseAsString(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                fallbackValue: ReadResponseAsString);
+            var __maxAttempts = global::Coze.AutoSDKRequestOptionsSupport.GetMaxAttempts(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                supportsRetry: true);
+
+            global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
+            {
+                            var __pathBuilder = new global::Coze.PathBuilder(
+                                path: "/v3/chat/submit_tool_outputs",
+                                baseUri: HttpClient.BaseAddress); 
+                            __pathBuilder
+                                .AddRequiredParameter("conversation_id", conversationId)
+                                .AddRequiredParameter("chat_id", chatId) 
+                                ;
+                            var __path = __pathBuilder.ToString();
+                __path = global::Coze.AutoSDKRequestOptionsSupport.AppendQueryParameters(
+                    path: __path,
+                    clientParameters: Options.QueryParameters,
+                    requestParameters: requestOptions?.QueryParameters);
+                var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                    method: global::System.Net.Http.HttpMethod.Post,
+                    requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
-            __httpRequest.Version = global::System.Net.HttpVersion.Version11;
-            __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+                __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+                __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
             foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
-                    __authorization.Type == "OAuth2")
+                    __authorization.Type == "OAuth2" ||
+                    __authorization.Type == "OpenIdConnect")
                 {
                     __httpRequest.Headers.Authorization = new global::System.Net.Http.Headers.AuthenticationHeaderValue(
                         scheme: __authorization.Name,
@@ -105,97 +129,256 @@ namespace Coze
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                }
+                } 
             }
-            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: __httpRequestContentBody,
-                encoding: global::System.Text.Encoding.UTF8,
-                mediaType: "application/json");
-            __httpRequest.Content = __httpRequestContent;
+                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+                            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                                content: __httpRequestContentBody,
+                                encoding: global::System.Text.Encoding.UTF8,
+                                mediaType: "application/json");
+                            __httpRequest.Content = __httpRequestContent;
+                global::Coze.AutoSDKRequestOptionsSupport.ApplyHeaders(
+                    request: __httpRequest,
+                    clientHeaders: Options.Headers,
+                    requestHeaders: requestOptions?.Headers);
 
-            PrepareRequest(
-                client: HttpClient,
-                request: __httpRequest);
-            PrepareSubmitToolOutputsAsStreamRequest(
-                httpClient: HttpClient,
-                httpRequestMessage: __httpRequest,
-                conversationId: conversationId,
-                chatId: chatId,
-                request: request);
+                PrepareRequest(
+                    client: HttpClient,
+                    request: __httpRequest);
+                PrepareSubmitToolOutputsAsStreamRequest(
+                    httpClient: HttpClient,
+                    httpRequestMessage: __httpRequest,
+                    conversationId: conversationId,
+                    chatId: chatId,
+                    request: request);
 
-            using var __response = await HttpClient.SendAsync(
-                request: __httpRequest,
-                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseHeadersRead,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
+                return __httpRequest;
+            }
 
-            ProcessResponse(
-                client: HttpClient,
-                response: __response);
-            ProcessSubmitToolOutputsAsStreamResponse(
-                httpClient: HttpClient,
-                httpResponseMessage: __response);
-
+            global::System.Net.Http.HttpRequestMessage? __httpRequest = null;
+            global::System.Net.Http.HttpResponseMessage? __response = null;
+            var __attemptNumber = 0;
             try
             {
-                __response.EnsureSuccessStatusCode();
+                for (var __attempt = 1; __attempt <= __maxAttempts; __attempt++)
+                {
+                    __attemptNumber = __attempt;
+                    __httpRequest = __CreateHttpRequest();
+                    await global::Coze.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
+                            clientOptions: Options,
+                            context: global::Coze.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "SubmitToolOutputsAsStream",
+                                methodName: "SubmitToolOutputsAsStreamAsync",
+                                pathTemplate: "\"/v3/chat/submit_tool_outputs\"",
+                                httpMethod: "POST",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: null,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                    try
+                    {
+                        __response = await HttpClient.SendAsync(
+                request: __httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseHeadersRead,
+                cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
+                    }
+                    catch (global::System.Net.Http.HttpRequestException __exception)
+                    {
+                        var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
+                        await global::Coze.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Coze.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "SubmitToolOutputsAsStream",
+                                methodName: "SubmitToolOutputsAsStreamAsync",
+                                pathTemplate: "\"/v3/chat/submit_tool_outputs\"",
+                                httpMethod: "POST",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: null,
+                                exception: __exception,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: __willRetry,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                        if (!__willRetry)
+                        {
+                            throw;
+                        }
+
+                        __httpRequest.Dispose();
+                        __httpRequest = null;
+                        await global::Coze.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
+                        continue;
+                    }
+
+                    if (__response != null &&
+                        __attempt < __maxAttempts &&
+                        global::Coze.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
+                    {
+                        await global::Coze.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Coze.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "SubmitToolOutputsAsStream",
+                                methodName: "SubmitToolOutputsAsStreamAsync",
+                                pathTemplate: "\"/v3/chat/submit_tool_outputs\"",
+                                httpMethod: "POST",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: true,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                        __response.Dispose();
+                        __response = null;
+                        __httpRequest.Dispose();
+                        __httpRequest = null;
+                        await global::Coze.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
+                        continue;
+                    }
+
+                    break;
+                }
+
+                if (__response == null)
+                {
+                    throw new global::System.InvalidOperationException("No response received.");
+                }
+
+                using (__response)
+                {
+
+                ProcessResponse(
+                    client: HttpClient,
+                    response: __response);
+                ProcessSubmitToolOutputsAsStreamResponse(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response);
+                if (__response.IsSuccessStatusCode)
+                {
+                    await global::Coze.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
+                            clientOptions: Options,
+                            context: global::Coze.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "SubmitToolOutputsAsStream",
+                                methodName: "SubmitToolOutputsAsStreamAsync",
+                                pathTemplate: "\"/v3/chat/submit_tool_outputs\"",
+                                httpMethod: "POST",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attemptNumber,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                }
+                else
+                {
+                    await global::Coze.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Coze.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "SubmitToolOutputsAsStream",
+                                methodName: "SubmitToolOutputsAsStreamAsync",
+                                pathTemplate: "\"/v3/chat/submit_tool_outputs\"",
+                                httpMethod: "POST",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attemptNumber,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                }
+
+                            try
+                            {
+                                __response.EnsureSuccessStatusCode();
+                            }
+                            catch (global::System.Net.Http.HttpRequestException __ex)
+                            {
+                                string? __content = null;
+                                try
+                                {
+                                    __content = await __response.Content.ReadAsStringAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
+                                }
+                                catch (global::System.Exception)
+                                {
+                                }
+
+                                throw new global::Coze.ApiException(
+                                    message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __ex,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+
+                            using var __stream = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                __effectiveCancellationToken
+                #endif
+                            ).ConfigureAwait(false);
+
+                            await foreach (var __sseEvent in global::System.Net.ServerSentEvents.SseParser
+                                .Create(__stream).EnumerateAsync(__effectiveCancellationToken))
+                            {
+                                var __content = __sseEvent.Data;
+                                if (__content == "[DONE]")
+                                {
+                                    yield break;
+                                }
+
+                                var __streamedResponse = global::Coze.SubmitToolOutputsResponse2.FromJson(__content, JsonSerializerContext) ??
+                                                       throw new global::Coze.ApiException(
+                                                           message: $"Response deserialization failed for \"{__content}\" ",
+                                                           statusCode: __response.StatusCode)
+                                                       {
+                                                           ResponseBody = __content,
+                                                           ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                                               __response.Headers,
+                                                               h => h.Key,
+                                                               h => h.Value),
+                                                       };
+
+                                yield return __streamedResponse;
+                            }
+
+                }
             }
-            catch (global::System.Net.Http.HttpRequestException __ex)
+            finally
             {
-                string? __content = null;
-                try
-                {
-                    __content = await __response.Content.ReadAsStringAsync(
-#if NET5_0_OR_GREATER
-                        cancellationToken
-#endif
-                    ).ConfigureAwait(false);
-                }
-                catch (global::System.Exception)
-                {
-                }
-
-                throw new global::Coze.ApiException(
-                    message: __content ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __ex,
-                    statusCode: __response.StatusCode)
-                {
-                    ResponseBody = __content,
-                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                        __response.Headers,
-                        h => h.Key,
-                        h => h.Value),
-                };
-            }
-
-            using var __stream = await __response.Content.ReadAsStreamAsync(
-#if NET5_0_OR_GREATER
-                cancellationToken
-#endif
-            ).ConfigureAwait(false);
-
-            await foreach (var __sseEvent in global::System.Net.ServerSentEvents.SseParser
-                .Create(__stream).EnumerateAsync(cancellationToken))
-            {
-                var __content = __sseEvent.Data;
-                if (__content == "[DONE]")
-                {
-                    yield break;
-                }
-
-                var __streamedResponse = global::Coze.SubmitToolOutputsResponse2.FromJson(__content, JsonSerializerContext) ??
-                                       throw new global::Coze.ApiException(
-                                           message: $"Response deserialization failed for \"{__content}\" ",
-                                           statusCode: __response.StatusCode)
-                                       {
-                                           ResponseBody = __content,
-                                           ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                                               __response.Headers,
-                                               h => h.Key,
-                                               h => h.Value),
-                                       };
-
-                yield return __streamedResponse;
+                __httpRequest?.Dispose();
             }
         }
         /// <summary>
@@ -205,12 +388,14 @@ namespace Coze
         /// <param name="conversationId"></param>
         /// <param name="chatId"></param>
         /// <param name="toolOutputs"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Collections.Generic.IAsyncEnumerable<global::Coze.SubmitToolOutputsResponse2> SubmitToolOutputsAsStreamAsync(
             string conversationId,
             string chatId,
             global::System.Collections.Generic.IList<global::Coze.ToolOutput> toolOutputs,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             [global::System.Runtime.CompilerServices.EnumeratorCancellation] global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::Coze.SubmitToolOutputsRequest
@@ -223,6 +408,7 @@ namespace Coze
                 conversationId: conversationId,
                 chatId: chatId,
                 request: __request,
+                requestOptions: requestOptions,
                 cancellationToken: cancellationToken);
 
             await foreach (var __response in __enumerable)

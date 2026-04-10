@@ -14,12 +14,14 @@ namespace Coze
         /// </summary>
         /// <param name="datasetId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.UpdateDatasetOpenAPIResponse> UpdateDatasetOpenAPIAsync(
             string datasetId,
 
             global::Coze.UpdateDatasetOpenAPIRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 修改知识库信息<br/>
@@ -33,6 +35,7 @@ namespace Coze
         /// <param name="description"></param>
         /// <param name="fileId"></param>
         /// <param name="name"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.UpdateDatasetOpenAPIResponse> UpdateDatasetOpenAPIAsync(
@@ -40,6 +43,7 @@ namespace Coze
             string name,
             string? description = default,
             string? fileId = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

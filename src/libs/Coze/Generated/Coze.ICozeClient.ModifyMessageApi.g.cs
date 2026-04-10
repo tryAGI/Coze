@@ -11,6 +11,7 @@ namespace Coze
         /// <param name="conversationId"></param>
         /// <param name="messageId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.ModifyMessageApiResponse> ModifyMessageApiAsync(
@@ -18,6 +19,7 @@ namespace Coze
             string messageId,
 
             global::Coze.ModifyMessageApiRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 修改消息<br/>
@@ -30,6 +32,7 @@ namespace Coze
         /// </param>
         /// <param name="contentType"></param>
         /// <param name="metaData"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.ModifyMessageApiResponse> ModifyMessageApiAsync(
@@ -38,6 +41,7 @@ namespace Coze
             string? content = default,
             global::Coze.ModifyMessageApiRequestContentType? contentType = default,
             global::System.Collections.Generic.Dictionary<string, string>? metaData = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
