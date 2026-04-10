@@ -14,6 +14,7 @@ namespace Coze
         /// <param name="workflowMode"></param>
         /// <param name="appId"></param>
         /// <param name="publishStatus"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenAPIGetWorkflowListResponse> OpenAPIGetWorkflowListAsync(
@@ -23,6 +24,7 @@ namespace Coze
             global::Coze.OpenAPIWorkflowMode? workflowMode = default,
             string? appId = default,
             global::Coze.PublishStatus? publishStatus = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

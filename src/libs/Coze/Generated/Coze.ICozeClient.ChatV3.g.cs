@@ -10,12 +10,14 @@ namespace Coze
         /// </summary>
         /// <param name="conversationId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.ChatV3Response> ChatV3Async(
 
             global::Coze.ChatV3Request request,
             string? conversationId = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 发起对话<br/>
@@ -42,6 +44,7 @@ namespace Coze
         /// </param>
         /// <param name="shortcutCommand"></param>
         /// <param name="userId"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.ChatV3Response> ChatV3Async(
@@ -58,6 +61,7 @@ namespace Coze
             object? parameters = default,
             global::Coze.ChatV3RequestPublishStatus? publishStatus = default,
             global::Coze.ShortcutCommandDetail? shortcutCommand = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -25,6 +25,7 @@ namespace Coze
             Authorizations.Add(new global::Coze.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "Token",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

@@ -10,12 +10,14 @@ namespace Coze
         /// </summary>
         /// <param name="workspaceId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenRemoveSpaceMemberResponse> OpenRemoveSpaceMemberAsync(
             string workspaceId,
 
             global::Coze.OpenRemoveSpaceMemberRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 批量移除空间中的用户<br/>
@@ -25,11 +27,13 @@ namespace Coze
         /// <param name="userIds">
         /// 要移除的成员，数量最多5
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenRemoveSpaceMemberResponse> OpenRemoveSpaceMemberAsync(
             string workspaceId,
             global::System.Collections.Generic.IList<string> userIds,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -10,12 +10,14 @@ namespace Coze
         /// </summary>
         /// <param name="workflowId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenAPIToggleCollaborationModeResponse> OpenAPIToggleCollaborationModeAsync(
             string workflowId,
 
             global::Coze.OpenAPIToggleCollaborationModeRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 开启或关闭工作流多人协作<br/>
@@ -23,11 +25,13 @@ namespace Coze
         /// </summary>
         /// <param name="workflowId"></param>
         /// <param name="collaborationMode"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenAPIToggleCollaborationModeResponse> OpenAPIToggleCollaborationModeAsync(
             string workflowId,
             global::Coze.OpenAPIToggleCollaborationModeRequestCollaborationMode? collaborationMode = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

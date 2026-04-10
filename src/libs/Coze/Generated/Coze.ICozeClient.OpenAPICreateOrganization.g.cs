@@ -10,12 +10,14 @@ namespace Coze
         /// </summary>
         /// <param name="enterpriseId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Coze.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenAPICreateOrganizationResponse> OpenAPICreateOrganizationAsync(
             string enterpriseId,
 
             global::Coze.OpenAPICreateOrganizationRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 创建组织<br/>
@@ -25,6 +27,7 @@ namespace Coze
         /// <param name="description"></param>
         /// <param name="name"></param>
         /// <param name="superAdminUserId"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Coze.OpenAPICreateOrganizationResponse> OpenAPICreateOrganizationAsync(
@@ -32,6 +35,7 @@ namespace Coze
             string name,
             string superAdminUserId,
             string? description = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
