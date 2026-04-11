@@ -6,6 +6,19 @@ namespace Coze
     public partial class CozeClient
     {
 
+        private static readonly global::Coze.AutoSDKServer[] s_SubmitToolOutputsAsStreamServers = new global::Coze.AutoSDKServer[]
+        {            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-com",
+                name: "International",
+                url: "https://api.coze.com/",
+                description: "International"),
+            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-cn",
+                name: "China",
+                url: "https://api.coze.cn/",
+                description: "China"),
+        };
+
 
         private static readonly global::Coze.EndPointSecurityRequirement s_SubmitToolOutputsAsStreamSecurityRequirement0 =
             new global::Coze.EndPointSecurityRequirement
@@ -97,7 +110,9 @@ namespace Coze
             {
                             var __pathBuilder = new global::Coze.PathBuilder(
                                 path: "/v3/chat/submit_tool_outputs",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_SubmitToolOutputsAsStreamServers,
+                                defaultBaseUrl: "https://api.coze.com/")); 
                             __pathBuilder
                                 .AddRequiredParameter("conversation_id", conversationId)
                                 .AddRequiredParameter("chat_id", chatId) 

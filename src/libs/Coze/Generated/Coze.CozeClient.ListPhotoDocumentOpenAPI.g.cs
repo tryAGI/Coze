@@ -6,6 +6,19 @@ namespace Coze
     public partial class CozeClient
     {
 
+        private static readonly global::Coze.AutoSDKServer[] s_ListPhotoDocumentOpenAPIServers = new global::Coze.AutoSDKServer[]
+        {            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-com",
+                name: "International",
+                url: "https://api.coze.com/",
+                description: "International"),
+            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-cn",
+                name: "China",
+                url: "https://api.coze.cn/",
+                description: "China"),
+        };
+
 
         private static readonly global::Coze.EndPointSecurityRequirement s_ListPhotoDocumentOpenAPISecurityRequirement0 =
             new global::Coze.EndPointSecurityRequirement
@@ -108,7 +121,9 @@ namespace Coze
             {
                             var __pathBuilder = new global::Coze.PathBuilder(
                                 path: $"/v1/datasets/{datasetId}/images",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_ListPhotoDocumentOpenAPIServers,
+                                defaultBaseUrl: "https://api.coze.com/")); 
                             __pathBuilder
                                 .AddOptionalParameter("page_num", pageNum?.ToString())
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
