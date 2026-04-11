@@ -6,6 +6,19 @@ namespace Coze
     public partial class CozeClient
     {
 
+        private static readonly global::Coze.AutoSDKServer[] s_GetSpacePublishedBotsListServers = new global::Coze.AutoSDKServer[]
+        {            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-com",
+                name: "International",
+                url: "https://api.coze.com/",
+                description: "International"),
+            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-cn",
+                name: "China",
+                url: "https://api.coze.cn/",
+                description: "China"),
+        };
+
 
         private static readonly global::Coze.EndPointSecurityRequirement s_GetSpacePublishedBotsListSecurityRequirement0 =
             new global::Coze.EndPointSecurityRequirement
@@ -94,7 +107,9 @@ namespace Coze
             {
                             var __pathBuilder = new global::Coze.PathBuilder(
                                 path: "/v1/space/published_bots_list",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_GetSpacePublishedBotsListServers,
+                                defaultBaseUrl: "https://api.coze.com/")); 
                             __pathBuilder
                                 .AddRequiredParameter("space_id", spaceId)
                                 .AddOptionalParameter("page_index", pageIndex?.ToString())

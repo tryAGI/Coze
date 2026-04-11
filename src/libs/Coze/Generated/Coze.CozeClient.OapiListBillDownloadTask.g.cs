@@ -6,6 +6,19 @@ namespace Coze
     public partial class CozeClient
     {
 
+        private static readonly global::Coze.AutoSDKServer[] s_OapiListBillDownloadTaskServers = new global::Coze.AutoSDKServer[]
+        {            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-com",
+                name: "International",
+                url: "https://api.coze.com/",
+                description: "International"),
+            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-cn",
+                name: "China",
+                url: "https://api.coze.cn/",
+                description: "China"),
+        };
+
 
         private static readonly global::Coze.EndPointSecurityRequirement s_OapiListBillDownloadTaskSecurityRequirement0 =
             new global::Coze.EndPointSecurityRequirement
@@ -94,7 +107,9 @@ namespace Coze
             {
                             var __pathBuilder = new global::Coze.PathBuilder(
                                 path: "/v1/commerce/benefit/bill_tasks",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_OapiListBillDownloadTaskServers,
+                                defaultBaseUrl: "https://api.coze.com/")); 
                             __pathBuilder
                                 .AddOptionalParameter("task_ids", taskIds, delimiter: ",", explode: true)
                                 .AddOptionalParameter("page_num", pageNum?.ToString())

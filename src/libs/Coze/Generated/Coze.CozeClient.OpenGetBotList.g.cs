@@ -6,6 +6,19 @@ namespace Coze
     public partial class CozeClient
     {
 
+        private static readonly global::Coze.AutoSDKServer[] s_OpenGetBotListServers = new global::Coze.AutoSDKServer[]
+        {            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-com",
+                name: "International",
+                url: "https://api.coze.com/",
+                description: "International"),
+            new global::Coze.AutoSDKServer(
+                id: "https-api-coze-cn",
+                name: "China",
+                url: "https://api.coze.cn/",
+                description: "China"),
+        };
+
 
         private static readonly global::Coze.EndPointSecurityRequirement s_OpenGetBotListSecurityRequirement0 =
             new global::Coze.EndPointSecurityRequirement
@@ -104,7 +117,9 @@ namespace Coze
             {
                             var __pathBuilder = new global::Coze.PathBuilder(
                                 path: "/v1/bots",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_OpenGetBotListServers,
+                                defaultBaseUrl: "https://api.coze.com/")); 
                             __pathBuilder
                                 .AddRequiredParameter("workspace_id", workspaceId)
                                 .AddOptionalParameter("publish_status", publishStatus?.ToValueString())
