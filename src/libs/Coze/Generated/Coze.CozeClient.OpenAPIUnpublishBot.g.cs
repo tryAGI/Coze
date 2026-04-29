@@ -154,7 +154,7 @@ namespace Coze
                 PrepareOpenAPIUnpublishBotRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    botId: botId,
+                    botId: botId!,
                     request: request);
 
                 return __httpRequest;

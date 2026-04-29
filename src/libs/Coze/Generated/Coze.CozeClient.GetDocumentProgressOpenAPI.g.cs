@@ -162,8 +162,8 @@ namespace Coze
                 PrepareGetDocumentProgressOpenAPIRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
-                    agwJsConv: agwJsConv,
+                    datasetId: datasetId!,
+                    agwJsConv: agwJsConv!,
                     request: request);
 
                 return __httpRequest;

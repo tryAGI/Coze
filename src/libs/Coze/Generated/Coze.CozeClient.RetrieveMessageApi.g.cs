@@ -149,8 +149,8 @@ namespace Coze
                 PrepareRetrieveMessageApiRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    conversationId: conversationId,
-                    messageId: messageId);
+                    conversationId: conversationId!,
+                    messageId: messageId!);
 
                 return __httpRequest;
             }

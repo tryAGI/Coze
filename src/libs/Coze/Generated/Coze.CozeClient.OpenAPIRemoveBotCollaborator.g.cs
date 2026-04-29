@@ -159,8 +159,8 @@ namespace Coze
                 PrepareOpenAPIRemoveBotCollaboratorRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    botId: botId,
-                    userId: userId,
+                    botId: botId!,
+                    userId: userId!,
                     request: request);
 
                 return __httpRequest;

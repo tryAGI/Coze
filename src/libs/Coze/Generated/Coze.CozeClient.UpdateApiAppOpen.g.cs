@@ -154,7 +154,7 @@ namespace Coze
                 PrepareUpdateApiAppOpenRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    apiAppId: apiAppId,
+                    apiAppId: apiAppId!,
                     request: request);
 
                 return __httpRequest;

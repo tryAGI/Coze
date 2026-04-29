@@ -167,7 +167,7 @@ namespace Coze
                 PrepareListDatasetOpenAPIRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    spaceId: spaceId,
+                    spaceId: spaceId!,
                     name: name,
                     formatType: formatType,
                     pageNum: pageNum,

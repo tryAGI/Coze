@@ -159,8 +159,8 @@ namespace Coze
                 PrepareOpenAPIUpdateOrganizationPeopleRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    organizationId: organizationId,
-                    userId: userId,
+                    organizationId: organizationId!,
+                    userId: userId!,
                     request: request);
 
                 return __httpRequest;

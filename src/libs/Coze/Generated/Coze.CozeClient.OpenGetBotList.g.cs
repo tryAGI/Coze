@@ -167,7 +167,7 @@ namespace Coze
                 PrepareOpenGetBotListRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId,
+                    workspaceId: workspaceId!,
                     publishStatus: publishStatus,
                     connectorId: connectorId,
                     pageNum: pageNum,

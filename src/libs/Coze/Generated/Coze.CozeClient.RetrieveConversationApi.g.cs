@@ -143,7 +143,7 @@ namespace Coze
                 PrepareRetrieveConversationApiRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    conversationId: conversationId);
+                    conversationId: conversationId!);
 
                 return __httpRequest;
             }

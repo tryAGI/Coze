@@ -163,8 +163,8 @@ namespace Coze
                 PrepareDeleteMessageApiRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    conversationId: conversationId,
-                    messageId: messageId,
+                    conversationId: conversationId!,
+                    messageId: messageId!,
                     request: request);
 
                 return __httpRequest;

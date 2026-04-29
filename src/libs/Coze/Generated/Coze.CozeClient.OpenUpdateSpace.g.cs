@@ -154,7 +154,7 @@ namespace Coze
                 PrepareOpenUpdateSpaceRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId,
+                    workspaceId: workspaceId!,
                     request: request);
 
                 return __httpRequest;

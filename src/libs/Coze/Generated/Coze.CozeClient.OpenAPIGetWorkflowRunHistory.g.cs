@@ -145,8 +145,8 @@ namespace Coze
                 PrepareOpenAPIGetWorkflowRunHistoryRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workflowId: workflowId,
-                    executeId: executeId);
+                    workflowId: workflowId!,
+                    executeId: executeId!);
 
                 return __httpRequest;
             }

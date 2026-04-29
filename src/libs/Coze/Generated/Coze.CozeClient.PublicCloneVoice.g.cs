@@ -137,13 +137,41 @@ namespace Coze
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Audio}"),
+                                    content: new global::System.Net.Http.StringContent(request.Audio.ToJson(JsonSerializerContext)),
                                     name: "\"audio\"");
                             }
                             __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent($"{request.AudioFormat}"),
+                                content: new global::System.Net.Http.StringContent(request.AudioFormat ?? string.Empty),
                                 name: "\"audio_format\"");
                             var __contentFile = new global::System.Net.Http.ByteArrayContent(request.File ?? global::System.Array.Empty<byte>());
+                            __contentFile.Headers.ContentType = new global::System.Net.Http.Headers.MediaTypeHeaderValue(
+                                request.Filename is null
+                                    ? "application/octet-stream"
+                                    : (global::System.IO.Path.GetExtension(request.Filename) ?? string.Empty).ToLowerInvariant() switch
+                                    {
+                                        ".aac" => "audio/aac",
+                                        ".flac" => "audio/flac",
+                                        ".gif" => "image/gif",
+                                        ".jpeg" => "image/jpeg",
+                                        ".jpg" => "image/jpeg",
+                                        ".json" => "application/json",
+                                        ".m4a" => "audio/mp4",
+                                        ".mp3" => "audio/mpeg",
+                                        ".mp4" => "video/mp4",
+                                        ".mpeg" => "audio/mpeg",
+                                        ".mpga" => "audio/mpeg",
+                                        ".oga" => "audio/ogg",
+                                        ".ogg" => "audio/ogg",
+                                        ".opus" => "audio/ogg",
+                                        ".pdf" => "application/pdf",
+                                        ".png" => "image/png",
+                                        ".txt" => "text/plain",
+                                        ".wav" => "audio/wav",
+                                        ".weba" => "audio/webm",
+                                        ".webm" => "video/webm",
+                                        ".webp" => "image/webp",
+                                        _ => "application/octet-stream",
+                                    });
                             __httpRequestContent.Add(
                                 content: __contentFile,
                                 name: "\"file\"",
@@ -156,39 +184,39 @@ namespace Coze
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Language}"),
+                                    content: new global::System.Net.Http.StringContent(request.Language ?? string.Empty),
                                     name: "\"language\"");
                             } 
                             if (request.PreviewText != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.PreviewText}"),
+                                    content: new global::System.Net.Http.StringContent(request.PreviewText ?? string.Empty),
                                     name: "\"preview_text\"");
                             } 
                             if (request.SpaceId != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.SpaceId}"),
+                                    content: new global::System.Net.Http.StringContent(request.SpaceId ?? string.Empty),
                                     name: "\"space_id\"");
                             } 
                             if (request.Text != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Text}"),
+                                    content: new global::System.Net.Http.StringContent(request.Text ?? string.Empty),
                                     name: "\"text\"");
                             } 
                             if (request.VoiceId != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.VoiceId}"),
+                                    content: new global::System.Net.Http.StringContent(request.VoiceId ?? string.Empty),
                                     name: "\"voice_id\"");
                             }
                             __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent($"{request.VoiceName}"),
+                                content: new global::System.Net.Http.StringContent(request.VoiceName ?? string.Empty),
                                 name: "\"voice_name\"");
                             __httpRequest.Content = __httpRequestContent;
                 global::Coze.AutoSDKRequestOptionsSupport.ApplyHeaders(

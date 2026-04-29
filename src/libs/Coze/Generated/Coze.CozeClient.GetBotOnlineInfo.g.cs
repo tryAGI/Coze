@@ -143,7 +143,7 @@ namespace Coze
                 PrepareGetBotOnlineInfoRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    botId: botId);
+                    botId: botId!);
 
                 return __httpRequest;
             }

@@ -170,7 +170,7 @@ namespace Coze
                     appId: appId,
                     botId: botId,
                     connectorId: connectorId,
-                    connectorUid: connectorUid,
+                    connectorUid: connectorUid!,
                     keywords: keywords);
 
                 return __httpRequest;

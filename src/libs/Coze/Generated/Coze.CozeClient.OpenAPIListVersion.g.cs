@@ -170,7 +170,7 @@ namespace Coze
                     pageSize: pageSize,
                     pageToken: pageToken,
                     includeInputOutput: includeInputOutput,
-                    workflowId: workflowId);
+                    workflowId: workflowId!);
 
                 return __httpRequest;
             }

@@ -167,7 +167,7 @@ namespace Coze
                 PrepareListConversationsApiRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    botId: botId,
+                    botId: botId!,
                     pageNum: pageNum,
                     pageSize: pageSize,
                     sortOrder: sortOrder,

@@ -154,7 +154,7 @@ namespace Coze
                 PrepareOpenAPIAddEnterpriseMemberRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    enterpriseId: enterpriseId,
+                    enterpriseId: enterpriseId!,
                     request: request);
 
                 return __httpRequest;

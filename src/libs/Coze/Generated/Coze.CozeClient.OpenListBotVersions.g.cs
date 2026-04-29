@@ -170,7 +170,7 @@ namespace Coze
                     pageSize: pageSize,
                     publishStatus: publishStatus,
                     connectorId: connectorId,
-                    botId: botId);
+                    botId: botId!);
 
                 return __httpRequest;
             }
