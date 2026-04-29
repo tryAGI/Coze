@@ -149,8 +149,8 @@ namespace Coze
                 PrepareListChatMessageApiRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    conversationId: conversationId,
-                    chatId: chatId);
+                    conversationId: conversationId!,
+                    chatId: chatId!);
 
                 return __httpRequest;
             }

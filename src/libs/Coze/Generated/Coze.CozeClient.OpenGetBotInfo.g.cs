@@ -149,7 +149,7 @@ namespace Coze
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     isPublished: isPublished,
-                    botId: botId);
+                    botId: botId!);
 
                 return __httpRequest;
             }

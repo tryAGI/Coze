@@ -159,8 +159,8 @@ namespace Coze
                 PrepareOpenAPIRemoveWorkflowCollaboratorRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workflowId: workflowId,
-                    userId: userId,
+                    workflowId: workflowId!,
+                    userId: userId!,
                     request: request);
 
                 return __httpRequest;

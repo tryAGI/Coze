@@ -154,7 +154,7 @@ namespace Coze
                 PrepareOpenAPIBindConnectorUserConfigRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    connectorId: connectorId,
+                    connectorId: connectorId!,
                     request: request);
 
                 return __httpRequest;

@@ -154,7 +154,7 @@ namespace Coze
                 PrepareOpenSwitchBotDevelopModeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    botId: botId,
+                    botId: botId!,
                     request: request);
 
                 return __httpRequest;

@@ -173,8 +173,8 @@ namespace Coze
                 PrepareOpenAPIGetWorkflowListRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId,
-                    pageNum: pageNum,
+                    workspaceId: workspaceId!,
+                    pageNum: pageNum!,
                     pageSize: pageSize,
                     workflowMode: workflowMode,
                     appId: appId,

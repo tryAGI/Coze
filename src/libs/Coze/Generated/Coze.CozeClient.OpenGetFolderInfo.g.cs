@@ -140,7 +140,7 @@ namespace Coze
                 PrepareOpenGetFolderInfoRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    folderId: folderId);
+                    folderId: folderId!);
 
                 return __httpRequest;
             }

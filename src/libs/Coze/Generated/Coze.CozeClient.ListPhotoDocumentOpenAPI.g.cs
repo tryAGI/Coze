@@ -174,7 +174,7 @@ namespace Coze
                     pageSize: pageSize,
                     keyword: keyword,
                     hasCaption: hasCaption,
-                    datasetId: datasetId);
+                    datasetId: datasetId!);
 
                 return __httpRequest;
             }

@@ -167,8 +167,8 @@ namespace Coze
                 PrepareOpenGetSpaceFolderRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId,
-                    folderType: folderType,
+                    workspaceId: workspaceId!,
+                    folderType: folderType!,
                     parentFolderId: parentFolderId,
                     pageNum: pageNum,
                     pageSize: pageSize);

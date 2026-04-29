@@ -155,7 +155,7 @@ namespace Coze
                 PrepareGetSpacePublishedBotsListRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    spaceId: spaceId,
+                    spaceId: spaceId!,
                     pageIndex: pageIndex,
                     pageSize: pageSize);
 

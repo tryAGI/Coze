@@ -149,7 +149,7 @@ namespace Coze
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     includeInputOutput: includeInputOutput,
-                    workflowId: workflowId);
+                    workflowId: workflowId!);
 
                 return __httpRequest;
             }

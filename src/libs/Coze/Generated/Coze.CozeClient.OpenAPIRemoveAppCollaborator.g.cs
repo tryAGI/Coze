@@ -159,8 +159,8 @@ namespace Coze
                 PrepareOpenAPIRemoveAppCollaboratorRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    appId: appId,
-                    userId: userId,
+                    appId: appId!,
+                    userId: userId!,
                     request: request);
 
                 return __httpRequest;

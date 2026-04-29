@@ -157,7 +157,7 @@ namespace Coze
                 PrepareCreateDocumentOpenAPIRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    agwJsConv: agwJsConv,
+                    agwJsConv: agwJsConv!,
                     request: request);
 
                 return __httpRequest;

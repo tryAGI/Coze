@@ -150,9 +150,9 @@ namespace Coze
                 PrepareOpenAPIGetNodeExecuteHistoryRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workflowId: workflowId,
-                    executeId: executeId,
-                    nodeExecuteUuid: nodeExecuteUuid);
+                    workflowId: workflowId!,
+                    executeId: executeId!,
+                    nodeExecuteUuid: nodeExecuteUuid!);
 
                 return __httpRequest;
             }

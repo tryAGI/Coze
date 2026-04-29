@@ -168,8 +168,8 @@ namespace Coze
                 PrepareSubmitToolOutputsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    conversationId: conversationId,
-                    chatId: chatId,
+                    conversationId: conversationId!,
+                    chatId: chatId!,
                     request: request);
 
                 return __httpRequest;

@@ -154,7 +154,7 @@ namespace Coze
                 PrepareOpenAPIAddAppCollaboratorRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    appId: appId,
+                    appId: appId!,
                     request: request);
 
                 return __httpRequest;
