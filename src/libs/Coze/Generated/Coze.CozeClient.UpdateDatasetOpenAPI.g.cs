@@ -76,6 +76,36 @@ namespace Coze
             global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await UpdateDatasetOpenAPIAsResponseAsync(
+                datasetId: datasetId,
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// 修改知识库信息<br/>
+        /// 调用此接口修改扣子知识库信息。<br/>
+        /// * 此接口会全量刷新知识库的 name、file_id 和 description 配置，如果未设置这些参数，参数将恢复默认配置。<br/>
+        /// * 知识库分为扣子知识库和火山知识库，该 API 仅用于修改扣子知识库，不支持修改火山知识库，如果需要修改火山知识库的信息，请参见[修改火山知识库信息 API 文档](https://whttps://www.volcengine.com/docs/84313/1254592)。<br/>
+        /// * 仅支持修改本人为所有者的知识库信息，包括知识库名称、图标、描述等信息。<br/>
+        /// * 如需修改知识库图标，需要先调用 API [上传文件](https://www.coze.cn/docs/developer_guides/upload_files)，将图片文件上传至扣子平台。
+        /// </summary>
+        /// <param name="datasetId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Coze.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Coze.AutoSDKHttpResponse<global::Coze.UpdateDatasetOpenAPIResponse>> UpdateDatasetOpenAPIAsResponseAsync(
+            string datasetId,
+
+            global::Coze.UpdateDatasetOpenAPIRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -107,6 +137,7 @@ namespace Coze
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Coze.PathBuilder(
                                 path: $"/v1/datasets/{datasetId}",
                                 baseUri: ResolveBaseUri(
@@ -189,6 +220,8 @@ namespace Coze
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -199,6 +232,11 @@ namespace Coze
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Coze.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Coze.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -216,6 +254,8 @@ namespace Coze
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -225,8 +265,7 @@ namespace Coze
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Coze.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -235,6 +274,11 @@ namespace Coze
                         __attempt < __maxAttempts &&
                         global::Coze.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Coze.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Coze.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Coze.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -251,14 +295,15 @@ namespace Coze
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Coze.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -298,6 +343,8 @@ namespace Coze
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -318,6 +365,8 @@ namespace Coze
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -342,9 +391,13 @@ namespace Coze
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Coze.UpdateDatasetOpenAPIResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Coze.UpdateDatasetOpenAPIResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Coze.AutoSDKHttpResponse<global::Coze.UpdateDatasetOpenAPIResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Coze.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -372,9 +425,13 @@ namespace Coze
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Coze.UpdateDatasetOpenAPIResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Coze.UpdateDatasetOpenAPIResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Coze.AutoSDKHttpResponse<global::Coze.UpdateDatasetOpenAPIResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Coze.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

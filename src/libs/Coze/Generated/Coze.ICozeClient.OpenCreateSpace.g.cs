@@ -24,6 +24,21 @@ namespace Coze
         /// {"0":{"ops":[{"insert":"创建工作空间。\n"}],"zoneId":"0","zoneType":"Z"}}
         /// </summary>
         /// <param name="authorization_"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Coze.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Coze.AutoSDKHttpResponse<global::Coze.OpenCreateSpaceResponse>> OpenCreateSpaceAsResponseAsync(
+
+            global::Coze.OpenCreateSpaceRequest request,
+            object? authorization_ = default,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// 创建工作空间<br/>
+        /// {"0":{"ops":[{"insert":"创建工作空间。\n"}],"zoneId":"0","zoneType":"Z"}}
+        /// </summary>
+        /// <param name="authorization_"></param>
         /// <param name="cozeAccountId">
         /// 组织id
         /// </param>

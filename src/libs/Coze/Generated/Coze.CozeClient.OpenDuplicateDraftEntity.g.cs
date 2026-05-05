@@ -68,6 +68,29 @@ namespace Coze
             global::Coze.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await OpenDuplicateDraftEntityAsResponseAsync(
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// 复制资源<br/>
+        /// {"0":{"ops":[{"insert":"复制智能体、扣子应用和工作流。\n"},{"attributes":{"anchor":"e8cfe53b","heading":"h2","lmkr":"1"},"insert":"*"},{"insert":"接口描述\n"},{"attributes":{"list":"bullet1","lmkr":"1"},"insert":"*"},{"insert":"本 API 支持"},{"attributes":{"bold":"true"},"insert":"同工作空间复制"},{"insert":"或"},{"attributes":{"bold":"true"},"insert":"跨工作空间复制"},{"insert":"。如果你是空间成员，你可以调用本 API 将工作空间内任意智能体、扣子应用和工作流，复制到本空间或同一企业/团队下的其他已加入的工作空间。\n"},{"attributes":{"list":"bullet1","lmkr":"1"},"insert":"*"},{"insert":"跨空间复制智能体或应用成功后，为保证正常运行，智能体和应用所使用的工作流、插件等资源也将同时复制到新空间。\n"},{"attributes":{"lmkr":"1","list":"bullet1"},"insert":"*"},{"insert":"该 API 分为同步执行和异步执行，扣子根据不同资源复制类型自动采用对应的执行方式，具体说明如下：\n"},{"attributes":{"lmkr":"1"},"insert":"*"},{"attributes":{"aceTable":"rs8vo4j1zca5dj5acmvhs504ypcaf9ii1c cs37vpaznrjdwdkztp9gl4p3ajuavptmar"},"insert":"*"},{"insert":"\n"},{"attributes":{"anchor":"0f133891","heading":"h2","lmkr":"1"},"insert":"*"},{"insert":"接口限制\n"},{"attributes":{"list":"bullet1","lmkr":"1"},"insert":"*"},{"insert":"不支持将个人工作空间中的资源复制到企业或团队工作空间中，个人版工作空间中的资源只能复制到本空间。\n"},{"attributes":{"list":"bullet1","lmkr":"1"},"insert":"*"},{"insert":"操作者需要加入源工作空间和目标工作空间。\n"},{"attributes":{"lmkr":"1","list":"bullet1"},"insert":"*"},{"insert":"复制后的智能体或扣子应用为草稿状态。\n"}],"zoneId":"0","zoneType":"Z"},"rs8vo4j1zca5dj5acmvhs504ypcaf9ii1c":{"ops":[{"attributes":{},"insert":{"id":"r19qt9v1qzu0mg0epi4plzd2pu5j4bf6mi"}},{"attributes":{},"insert":{"id":"r1bh2obvla1g8ccpl3j8s043cd2b9kegdh"}},{"attributes":{},"insert":{"id":"r1yv6gau5df6t3ly9zb1ivylzmqrfg18ja"}}],"zoneId":"rs8vo4j1zca5dj5acmvhs504ypcaf9ii1c","zoneType":"R"},"cs37vpaznrjdwdkztp9gl4p3ajuavptmar":{"ops":[{"attributes":{"colWidth":"100"},"insert":{"id":"c1in7wpdp0r5jbiult938ogm712ufruk5t"}},{"attributes":{"colWidth":"336"},"insert":{"id":"c1veg2wg29a574pzw5k40naqrjyjqfyfvv"}},{"attributes":{"colWidth":"497"},"insert":{"id":"c1gmu2zjml0ykfyvbet45zdp68pu8hvm2d"}}],"zoneId":"cs37vpaznrjdwdkztp9gl4p3ajuavptmar","zoneType":"C"},"xr19qt9v1qzu0mg0epi4plzd2pu5j4bf6mixc1in7wpdp0r5jbiult938ogm712ufruk5t":{"ops":[{"attributes":{"bold":"true"},"insert":"执行模式"},{"insert":"\n"}],"zoneId":"xr19qt9v1qzu0mg0epi4plzd2pu5j4bf6mixc1in7wpdp0r5jbiult938ogm712ufruk5t","zoneType":"Z"},"xr19qt9v1qzu0mg0epi4plzd2pu5j4bf6mixc1veg2wg29a574pzw5k40naqrjyjqfyfvv":{"ops":[{"attributes":{"bold":"true"},"insert":"适用场景"},{"insert":"\n"}],"zoneId":"xr19qt9v1qzu0mg0epi4plzd2pu5j4bf6mixc1veg2wg29a574pzw5k40naqrjyjqfyfvv","zoneType":"Z"},"xr19qt9v1qzu0mg0epi4plzd2pu5j4bf6mixc1gmu2zjml0ykfyvbet45zdp68pu8hvm2d":{"ops":[{"attributes":{"bold":"true"},"insert":"结果返回方式"},{"insert":"\n"}],"zoneId":"xr19qt9v1qzu0mg0epi4plzd2pu5j4bf6mixc1gmu2zjml0ykfyvbet45zdp68pu8hvm2d","zoneType":"Z"},"xr1bh2obvla1g8ccpl3j8s043cd2b9kegdhxc1in7wpdp0r5jbiult938ogm712ufruk5t":{"ops":[{"insert":"同步执行\n"}],"zoneId":"xr1bh2obvla1g8ccpl3j8s043cd2b9kegdhxc1in7wpdp0r5jbiult938ogm712ufruk5t","zoneType":"Z"},"xr1bh2obvla1g8ccpl3j8s043cd2b9kegdhxc1veg2wg29a574pzw5k40naqrjyjqfyfvv":{"ops":[{"insert":"同一工作空间内复制"},{"attributes":{"bold":"true"},"insert":"智能体"},{"insert":"。\n"}],"zoneId":"xr1bh2obvla1g8ccpl3j8s043cd2b9kegdhxc1veg2wg29a574pzw5k40naqrjyjqfyfvv","zoneType":"Z"},"xr1bh2obvla1g8ccpl3j8s043cd2b9kegdhxc1gmu2zjml0ykfyvbet45zdp68pu8hvm2d":{"ops":[{"insert":"API 直接返回复制后的智能体 ID。\n"}],"zoneId":"xr1bh2obvla1g8ccpl3j8s043cd2b9kegdhxc1gmu2zjml0ykfyvbet45zdp68pu8hvm2d","zoneType":"Z"},"xr1yv6gau5df6t3ly9zb1ivylzmqrfg18jaxc1in7wpdp0r5jbiult938ogm712ufruk5t":{"ops":[{"insert":"异步执行\n"}],"zoneId":"xr1yv6gau5df6t3ly9zb1ivylzmqrfg18jaxc1in7wpdp0r5jbiult938ogm712ufruk5t","zoneType":"Z"},"xr1yv6gau5df6t3ly9zb1ivylzmqrfg18jaxc1veg2wg29a574pzw5k40naqrjyjqfyfvv":{"ops":[{"attributes":{"list":"bullet1","lmkr":"1"},"insert":"*"},{"insert":"同一工作空间内复制"},{"attributes":{"bold":"true"},"insert":"扣子应用"},{"insert":"、"},{"attributes":{"bold":"true"},"insert":"工作流"},{"insert":"。\n"},{"attributes":{"list":"bullet1","lmkr":"1"},"insert":"*"},{"insert":"跨工作空间复制"},{"attributes":{"bold":"true"},"insert":"智能体"},{"insert":"、"},{"attributes":{"bold":"true"},"insert":"扣子应用"},{"insert":"、"},{"attributes":{"bold":"true"},"insert":"工作流"},{"insert":"。\n"}],"zoneId":"xr1yv6gau5df6t3ly9zb1ivylzmqrfg18jaxc1veg2wg29a574pzw5k40naqrjyjqfyfvv","zoneType":"Z"},"xr1yv6gau5df6t3ly9zb1ivylzmqrfg18jaxc1gmu2zjml0ykfyvbet45zdp68pu8hvm2d":{"ops":[{"insert":"API 返回任务 ID（"},{"attributes":{"inlineCode":"true"},"insert":"task_id"},{"insert":"），需要通过"},{"attributes":{"hyperlink":"{\"href\":\"https://www.coze.cn/open/docs/developer_guides/query_resource_copy_execution_result\",\"linkId\":\"hWFInXcZNq\"}"},"insert":"查询资源复制的结果"},{"insert":"  API 查询执行结果。\n"}],"zoneId":"xr1yv6gau5df6t3ly9zb1ivylzmqrfg18jaxc1gmu2zjml0ykfyvbet45zdp68pu8hvm2d","zoneType":"Z"}}
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Coze.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Coze.AutoSDKHttpResponse<global::Coze.OpenDuplicateDraftEntityResponse>> OpenDuplicateDraftEntityAsResponseAsync(
+
+            global::Coze.OpenDuplicateDraftEntityRequest request,
+            global::Coze.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -98,6 +121,7 @@ namespace Coze
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Coze.PathBuilder(
                                 path: "/v1/entities/copy_tasks",
                                 baseUri: ResolveBaseUri(
@@ -179,6 +203,8 @@ namespace Coze
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -189,6 +215,11 @@ namespace Coze
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Coze.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Coze.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -206,6 +237,8 @@ namespace Coze
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -215,8 +248,7 @@ namespace Coze
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Coze.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -225,6 +257,11 @@ namespace Coze
                         __attempt < __maxAttempts &&
                         global::Coze.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Coze.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Coze.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Coze.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -241,14 +278,15 @@ namespace Coze
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Coze.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -288,6 +326,8 @@ namespace Coze
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -308,6 +348,8 @@ namespace Coze
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -332,9 +374,13 @@ namespace Coze
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Coze.OpenDuplicateDraftEntityResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Coze.OpenDuplicateDraftEntityResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Coze.AutoSDKHttpResponse<global::Coze.OpenDuplicateDraftEntityResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Coze.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -362,9 +408,13 @@ namespace Coze
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Coze.OpenDuplicateDraftEntityResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Coze.OpenDuplicateDraftEntityResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Coze.AutoSDKHttpResponse<global::Coze.OpenDuplicateDraftEntityResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Coze.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
