@@ -327,6 +327,8 @@ namespace Coze
 
             typeof(global::Coze.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListConversationData), TypeInfoPropertyName = "ListConversationData_Coze_ListConversationData")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ConversationData>), TypeInfoPropertyName = "ListConversationData_System_Collections_Generic_List_global_Coze_ConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.JsonSerializerContextTypes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ResponseDetail))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
@@ -409,7 +411,6 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.EnterMessage1Role), TypeInfoPropertyName = "EnterMessage1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.EnterMessage1Type), TypeInfoPropertyName = "EnterMessage1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.FeedbackType), TypeInfoPropertyName = "FeedbackType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListConversationData), TypeInfoPropertyName = "ListConversationData_Coze_ListConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Coze.ConversationData>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenMessageApi))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenMessageApiContentType), TypeInfoPropertyName = "OpenMessageApiContentType2")]
@@ -808,7 +809,6 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.PhotoInfo>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.KVItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.InterruptPlugin>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ConversationData>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.PluginInfo>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ShortcutCommandInfo>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.Variable>))]
@@ -827,6 +827,333 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.TaskFailedReason>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.BotSimpleInfo>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.FolderSimpleInfo>))]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Coze.JsonConverters.EmotionJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EmotionNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIVoiceStateJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIVoiceStateNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PublishStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PublishStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatMessageContentExpandTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatMessageContentExpandTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatMessageExpandTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatMessageExpandTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage1ContentTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage1ContentTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage1RoleJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage1RoleNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage1TypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage1TypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.FeedbackTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.FeedbackTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenMessageApiContentTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenMessageApiContentTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenMessageApiRoleJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenMessageApiRoleNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenMessageApiTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenMessageApiTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CacheTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CacheTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage2ContentTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage2ContentTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage2RoleJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage2RoleNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage2TypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterMessage2TypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PromptModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PromptModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PublishStatus1JsonConverter),
+
+            typeof(global::Coze.JsonConverters.PublishStatus1NullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ShortcutSendTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ShortcutSendTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.StreamModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.StreamModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.SuggestReplyModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.SuggestReplyModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.VariableChannelJsonConverter),
+
+            typeof(global::Coze.JsonConverters.VariableChannelNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.VariableTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.VariableTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ListWorkspaceScopeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ListWorkspaceScopeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.SpaceMemberJoinedStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.SpaceMemberJoinedStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.WorkspaceRoleTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.WorkspaceRoleTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIEndReturnTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIEndReturnTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIParamTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIParamTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIParameterTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIParameterTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIWorkflowModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIWorkflowModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterpriseMemberRoleJsonConverter),
+
+            typeof(global::Coze.JsonConverters.EnterpriseMemberRoleNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OrganizationPeopleOrganizationRoleTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OrganizationPeopleOrganizationRoleTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OrganizationPeoplePeopleTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OrganizationPeoplePeopleTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OrganizationRoleTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OrganizationRoleTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PeopleTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PeopleTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.AppTypeOpenJsonConverter),
+
+            typeof(global::Coze.JsonConverters.AppTypeOpenNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.FolderTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.FolderTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.TaskEntityTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.TaskEntityTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.TaskStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.TaskStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesConfigRoomModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesConfigRoomModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesConfigPropertiesTurnDetectionTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesConfigPropertiesTurnDetectionTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBasicInfoUserLevelJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBasicInfoUserLevelNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsBenefitTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsBenefitTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicPropertiesItemInfoStrategyJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicPropertiesItemInfoStrategyNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesEffectiveStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesEffectiveStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesEffectivePropertiesItemInfoStrategyJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesEffectivePropertiesItemInfoStrategyNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItemsStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItemsStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItemsPropertiesItemInfoStrategyJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItemsPropertiesItemInfoStrategyNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesInterruptDataPropertiesRequiredParametersAdditionalPropertiesTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesInterruptDataPropertiesRequiredParametersAdditionalPropertiesTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesModelInfoConfigApiModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesModelInfoConfigApiModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesModelInfoConfigCacheTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesModelInfoConfigCacheTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesOrganizationPeopleItemsOrganizationRoleTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesOrganizationPeopleItemsOrganizationRoleTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesPromptInfoPromptModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesPromptInfoPromptModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesSuggestReplyInfoReplyModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesSuggestReplyInfoReplyModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesUsersItemsRoleJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PropertiesUsersItemsRoleNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatSDKRequestConfigTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatSDKRequestConfigTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CreateApiAppOpenRequestAppTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CreateApiAppOpenRequestAppTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PublicAudioSpeechRequestEmotionJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PublicAudioSpeechRequestEmotionNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PublicAudioSpeechRequestResponseFormatJsonConverter),
+
+            typeof(global::Coze.JsonConverters.PublicAudioSpeechRequestResponseFormatNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenSwitchBotDevelopModeRequestCollaborationModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenSwitchBotDevelopModeRequestCollaborationModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CreateMessageApiRequestContentTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CreateMessageApiRequestContentTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CreateMessageApiRequestRoleJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CreateMessageApiRequestRoleNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ListMessageApiRequestOrderJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ListMessageApiRequestOrderNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ModifyMessageApiRequestContentTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ModifyMessageApiRequestContentTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIUpdateEnterpriseMemberRequestRoleJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIUpdateEnterpriseMemberRequestRoleNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIUpdateOrganizationPeopleRequestOrganizationRoleTypeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIUpdateOrganizationPeopleRequestOrganizationRoleTypeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIToggleCollaborationModeRequestCollaborationModeJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenAPIToggleCollaborationModeRequestCollaborationModeNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatV3RequestPublishStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatV3RequestPublishStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CreateDocumentOpenAPIAgwJsConvJsonConverter),
+
+            typeof(global::Coze.JsonConverters.CreateDocumentOpenAPIAgwJsConvNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.DeleteDocumentAPIAgwJsConvJsonConverter),
+
+            typeof(global::Coze.JsonConverters.DeleteDocumentAPIAgwJsConvNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ListDocumentOpenAPIAgwJsConvJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ListDocumentOpenAPIAgwJsConvNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenGetProjectListPublishStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenGetProjectListPublishStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenGetBotListPublishStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenGetBotListPublishStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenListBotVersionsPublishStatusJsonConverter),
+
+            typeof(global::Coze.JsonConverters.OpenListBotVersionsPublishStatusNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.GetDocumentProgressOpenAPIAgwJsConvJsonConverter),
+
+            typeof(global::Coze.JsonConverters.GetDocumentProgressOpenAPIAgwJsConvNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatV3ResponseEventJsonConverter),
+
+            typeof(global::Coze.JsonConverters.ChatV3ResponseEventNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.SubmitToolOutputsResponseEventJsonConverter),
+
+            typeof(global::Coze.JsonConverters.SubmitToolOutputsResponseEventNullableJsonConverter),
+
+            typeof(global::Coze.JsonConverters.UnixTimestampJsonConverter),
+        })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListConversationData), TypeInfoPropertyName = "ListConversationData_Coze_ListConversationData")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ConversationData>), TypeInfoPropertyName = "ListConversationData_System_Collections_Generic_List_global_Coze_ConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.PropertiesDataPropertiesBenefitInfoItems>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItems>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.PropertiesPluginIdListPropertiesIdListItems>))]
@@ -846,7 +1173,207 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.GetDocumentProgressOpenAPIResponseDataDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.WorkflowExecuteHistory>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ChatV3MessageDetail>))]
+    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = global::System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
+            SourceGenerationContextChunk0.Default,
+
+            SourceGenerationContextChunk1.Default
+            );
+
+        private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SourceGenerationContext Default { get; } = new(DefaultOptions);
+
+        private SourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+            : base(options)
+        {
+        }
+
+        /// <inheritdoc />
+        protected override global::System.Text.Json.JsonSerializerOptions? GeneratedSerializerOptions => DefaultOptions;
+
+        /// <inheritdoc />
+        public override global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(global::System.Type type)
+        {
+            return Resolver.GetTypeInfo(type, Options);
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            options.Converters.Add(new global::Coze.JsonConverters.EmotionJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EmotionNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIVoiceStateJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIVoiceStateNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PublishStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PublishStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatMessageContentExpandTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatMessageContentExpandTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatMessageExpandTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatMessageExpandTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage1ContentTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage1ContentTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage1RoleJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage1RoleNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage1TypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage1TypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.FeedbackTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.FeedbackTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenMessageApiContentTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenMessageApiContentTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenMessageApiRoleJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenMessageApiRoleNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenMessageApiTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenMessageApiTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CacheTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CacheTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage2ContentTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage2ContentTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage2RoleJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage2RoleNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage2TypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterMessage2TypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PromptModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PromptModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PublishStatus1JsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PublishStatus1NullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ShortcutSendTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ShortcutSendTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.StreamModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.StreamModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.SuggestReplyModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.SuggestReplyModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.VariableChannelJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.VariableChannelNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.VariableTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.VariableTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ListWorkspaceScopeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ListWorkspaceScopeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.SpaceMemberJoinedStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.SpaceMemberJoinedStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.WorkspaceRoleTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.WorkspaceRoleTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIEndReturnTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIEndReturnTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIParamTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIParamTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIParameterTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIParameterTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIWorkflowModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIWorkflowModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterpriseMemberRoleJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.EnterpriseMemberRoleNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OrganizationPeopleOrganizationRoleTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OrganizationPeopleOrganizationRoleTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OrganizationPeoplePeopleTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OrganizationPeoplePeopleTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OrganizationRoleTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OrganizationRoleTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PeopleTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PeopleTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.AppTypeOpenJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.AppTypeOpenNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.FolderTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.FolderTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.TaskEntityTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.TaskEntityTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.TaskStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.TaskStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesConfigRoomModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesConfigRoomModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesConfigPropertiesTurnDetectionTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesConfigPropertiesTurnDetectionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBasicInfoUserLevelJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBasicInfoUserLevelNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsBenefitTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsBenefitTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicPropertiesItemInfoStrategyJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicPropertiesItemInfoStrategyNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesEffectiveStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesEffectiveStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesEffectivePropertiesItemInfoStrategyJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesEffectivePropertiesItemInfoStrategyNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItemsStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItemsStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItemsPropertiesItemInfoStrategyJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItemsPropertiesItemInfoStrategyNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesInterruptDataPropertiesRequiredParametersAdditionalPropertiesTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesInterruptDataPropertiesRequiredParametersAdditionalPropertiesTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesModelInfoConfigApiModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesModelInfoConfigApiModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesModelInfoConfigCacheTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesModelInfoConfigCacheTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesOrganizationPeopleItemsOrganizationRoleTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesOrganizationPeopleItemsOrganizationRoleTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesPromptInfoPromptModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesPromptInfoPromptModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesSuggestReplyInfoReplyModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesSuggestReplyInfoReplyModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesUsersItemsRoleJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PropertiesUsersItemsRoleNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatSDKRequestConfigTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatSDKRequestConfigTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CreateApiAppOpenRequestAppTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CreateApiAppOpenRequestAppTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PublicAudioSpeechRequestEmotionJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PublicAudioSpeechRequestEmotionNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PublicAudioSpeechRequestResponseFormatJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.PublicAudioSpeechRequestResponseFormatNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenSwitchBotDevelopModeRequestCollaborationModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenSwitchBotDevelopModeRequestCollaborationModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CreateMessageApiRequestContentTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CreateMessageApiRequestContentTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CreateMessageApiRequestRoleJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CreateMessageApiRequestRoleNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ListMessageApiRequestOrderJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ListMessageApiRequestOrderNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ModifyMessageApiRequestContentTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ModifyMessageApiRequestContentTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIUpdateEnterpriseMemberRequestRoleJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIUpdateEnterpriseMemberRequestRoleNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIUpdateOrganizationPeopleRequestOrganizationRoleTypeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIUpdateOrganizationPeopleRequestOrganizationRoleTypeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIToggleCollaborationModeRequestCollaborationModeJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenAPIToggleCollaborationModeRequestCollaborationModeNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatV3RequestPublishStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatV3RequestPublishStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CreateDocumentOpenAPIAgwJsConvJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.CreateDocumentOpenAPIAgwJsConvNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.DeleteDocumentAPIAgwJsConvJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.DeleteDocumentAPIAgwJsConvNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ListDocumentOpenAPIAgwJsConvJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ListDocumentOpenAPIAgwJsConvNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenGetProjectListPublishStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenGetProjectListPublishStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenGetBotListPublishStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenGetBotListPublishStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenListBotVersionsPublishStatusJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.OpenListBotVersionsPublishStatusNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.GetDocumentProgressOpenAPIAgwJsConvJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.GetDocumentProgressOpenAPIAgwJsConvNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatV3ResponseEventJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.ChatV3ResponseEventNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.SubmitToolOutputsResponseEventJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.SubmitToolOutputsResponseEventNullableJsonConverter());
+            options.Converters.Add(new global::Coze.JsonConverters.UnixTimestampJsonConverter());
+
+            return options;
+        }
     }
 }
