@@ -78,5 +78,6 @@ namespace Coze
         public OpenAPIStreamResumeFlowRequest()
         {
         }
+
     }
 }

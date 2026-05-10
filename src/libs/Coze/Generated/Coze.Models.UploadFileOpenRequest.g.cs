@@ -90,5 +90,6 @@ namespace Coze
         public UploadFileOpenRequest()
         {
         }
+
     }
 }

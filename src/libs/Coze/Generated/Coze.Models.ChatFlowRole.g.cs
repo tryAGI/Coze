@@ -146,5 +146,6 @@ namespace Coze
         public ChatFlowRole()
         {
         }
+
     }
 }

@@ -85,5 +85,6 @@ namespace Coze
         public PluginInfo()
         {
         }
+
     }
 }

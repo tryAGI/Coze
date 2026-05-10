@@ -103,5 +103,6 @@ namespace Coze
         public TableColumn()
         {
         }
+
     }
 }

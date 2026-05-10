@@ -143,5 +143,6 @@ namespace Coze
         public PhotoInfo()
         {
         }
+
     }
 }

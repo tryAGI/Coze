@@ -39,5 +39,6 @@ namespace Coze
         public PropertiesPluginIdList()
         {
         }
+
     }
 }

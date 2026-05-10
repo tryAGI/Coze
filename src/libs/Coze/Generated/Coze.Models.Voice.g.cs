@@ -52,5 +52,6 @@ namespace Coze
         public Voice()
         {
         }
+
     }
 }

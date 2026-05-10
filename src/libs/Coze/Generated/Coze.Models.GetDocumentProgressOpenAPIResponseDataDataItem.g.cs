@@ -137,5 +137,6 @@ namespace Coze
         public GetDocumentProgressOpenAPIResponseDataDataItem()
         {
         }
+
     }
 }

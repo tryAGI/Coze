@@ -93,5 +93,6 @@ namespace Coze
         public OpenAPIParameter()
         {
         }
+
     }
 }

@@ -102,5 +102,6 @@ namespace Coze
         public ConversationData()
         {
         }
+
     }
 }

@@ -57,5 +57,6 @@ namespace Coze
         public EmotionInfo()
         {
         }
+
     }
 }

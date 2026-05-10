@@ -87,5 +87,6 @@ namespace Coze
         public OpenCreateSpaceRequest()
         {
         }
+
     }
 }

@@ -74,5 +74,6 @@ namespace Coze
         public IndexStrategy()
         {
         }
+
     }
 }

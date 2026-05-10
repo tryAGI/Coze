@@ -129,5 +129,6 @@ namespace Coze
         public PropertiesDataPropertiesBenefitInfo()
         {
         }
+
     }
 }

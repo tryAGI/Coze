@@ -115,5 +115,6 @@ namespace Coze
         public PropertiesDataPropertiesItemsItems()
         {
         }
+
     }
 }
