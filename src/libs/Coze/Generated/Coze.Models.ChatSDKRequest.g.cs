@@ -69,5 +69,6 @@ namespace Coze
         public ChatSDKRequest()
         {
         }
+
     }
 }

@@ -66,5 +66,6 @@ namespace Coze
         public CanvasPosition1()
         {
         }
+
     }
 }

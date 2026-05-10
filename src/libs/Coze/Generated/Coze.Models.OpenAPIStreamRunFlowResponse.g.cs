@@ -240,5 +240,6 @@ namespace Coze
         public OpenAPIStreamRunFlowResponse()
         {
         }
+
     }
 }

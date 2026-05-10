@@ -62,5 +62,6 @@ namespace Coze
         public OpenAPIWorkflowOutput()
         {
         }
+
     }
 }

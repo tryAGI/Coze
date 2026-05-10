@@ -142,5 +142,6 @@ namespace Coze
         public ChatV3ChatDetail()
         {
         }
+
     }
 }

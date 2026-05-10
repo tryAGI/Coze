@@ -70,5 +70,6 @@ namespace Coze
         public RetrieveConversationApiResponse()
         {
         }
+
     }
 }

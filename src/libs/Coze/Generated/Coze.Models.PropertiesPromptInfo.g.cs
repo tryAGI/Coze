@@ -64,5 +64,6 @@ namespace Coze
         public PropertiesPromptInfo()
         {
         }
+
     }
 }

@@ -101,5 +101,6 @@ namespace Coze
         public PropertiesDataPropertiesTaskInfosItems()
         {
         }
+
     }
 }

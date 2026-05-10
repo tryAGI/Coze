@@ -58,5 +58,6 @@ namespace Coze
         public OpenDuplicateDraftEntityRequest()
         {
         }
+
     }
 }

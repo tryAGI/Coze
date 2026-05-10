@@ -49,5 +49,6 @@ namespace Coze
         public OpenAPIBindConnectorUserConfigRequest()
         {
         }
+
     }
 }

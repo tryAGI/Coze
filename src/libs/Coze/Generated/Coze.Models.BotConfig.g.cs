@@ -48,5 +48,6 @@ namespace Coze
         public BotConfig()
         {
         }
+
     }
 }

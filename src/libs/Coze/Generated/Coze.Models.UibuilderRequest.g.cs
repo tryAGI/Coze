@@ -77,5 +77,6 @@ namespace Coze
         public UibuilderRequest()
         {
         }
+
     }
 }

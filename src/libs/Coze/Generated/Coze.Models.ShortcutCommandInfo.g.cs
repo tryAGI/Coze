@@ -127,5 +127,6 @@ namespace Coze
         public ShortcutCommandInfo()
         {
         }
+
     }
 }

@@ -42,5 +42,6 @@ namespace Coze
         public UibuilderRequestUi()
         {
         }
+
     }
 }

@@ -106,5 +106,6 @@ namespace Coze
         public BotSimpleInfo()
         {
         }
+
     }
 }

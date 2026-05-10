@@ -139,5 +139,6 @@ namespace Coze
         public UpdateDraftBotRequest()
         {
         }
+
     }
 }

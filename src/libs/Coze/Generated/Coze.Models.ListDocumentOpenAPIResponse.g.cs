@@ -79,5 +79,6 @@ namespace Coze
         public ListDocumentOpenAPIResponse()
         {
         }
+
     }
 }

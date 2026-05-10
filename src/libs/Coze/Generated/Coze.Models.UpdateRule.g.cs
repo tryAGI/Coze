@@ -50,5 +50,6 @@ namespace Coze
         public UpdateRule()
         {
         }
+
     }
 }

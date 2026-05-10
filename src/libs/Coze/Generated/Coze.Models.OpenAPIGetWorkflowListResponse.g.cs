@@ -71,5 +71,6 @@ namespace Coze
         public OpenAPIGetWorkflowListResponse()
         {
         }
+
     }
 }
