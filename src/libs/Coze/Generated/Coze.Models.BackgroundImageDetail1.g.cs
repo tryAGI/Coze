@@ -97,5 +97,6 @@ namespace Coze
         public BackgroundImageDetail1()
         {
         }
+
     }
 }

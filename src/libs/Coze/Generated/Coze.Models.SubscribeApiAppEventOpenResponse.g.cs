@@ -61,5 +61,6 @@ namespace Coze
         public SubscribeApiAppEventOpenResponse()
         {
         }
+
     }
 }

@@ -75,5 +75,6 @@ namespace Coze
         public OpenSpaceMember()
         {
         }
+
     }
 }

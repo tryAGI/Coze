@@ -73,5 +73,6 @@ namespace Coze
         public TaskFailedReason()
         {
         }
+
     }
 }

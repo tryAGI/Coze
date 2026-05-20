@@ -51,5 +51,6 @@ namespace Coze
         public PropertiesUsersItems()
         {
         }
+
     }
 }

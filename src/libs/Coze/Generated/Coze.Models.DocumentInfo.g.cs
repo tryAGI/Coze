@@ -192,5 +192,6 @@ namespace Coze
         public DocumentInfo()
         {
         }
+
     }
 }

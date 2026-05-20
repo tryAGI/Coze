@@ -40,5 +40,6 @@ namespace Coze
         public UpdateConversationApiRequest()
         {
         }
+
     }
 }

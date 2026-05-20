@@ -172,5 +172,6 @@ namespace Coze
         public OpenAPIVoiceData()
         {
         }
+
     }
 }

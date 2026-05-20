@@ -133,5 +133,6 @@ namespace Coze
         public CreateDraftBotRequest()
         {
         }
+
     }
 }

@@ -88,5 +88,6 @@ namespace Coze
         public ApiAppOpenV2()
         {
         }
+
     }
 }

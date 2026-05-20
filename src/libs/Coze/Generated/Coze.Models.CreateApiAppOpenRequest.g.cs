@@ -65,5 +65,6 @@ namespace Coze
         public CreateApiAppOpenRequest()
         {
         }
+
     }
 }

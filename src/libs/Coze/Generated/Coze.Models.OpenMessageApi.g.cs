@@ -162,5 +162,6 @@ namespace Coze
         public OpenMessageApi()
         {
         }
+
     }
 }

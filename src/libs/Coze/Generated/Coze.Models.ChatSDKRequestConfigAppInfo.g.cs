@@ -59,5 +59,6 @@ namespace Coze
         public ChatSDKRequestConfigAppInfo()
         {
         }
+
     }
 }

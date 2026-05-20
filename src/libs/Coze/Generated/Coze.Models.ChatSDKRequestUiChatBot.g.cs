@@ -111,5 +111,6 @@ namespace Coze
         public ChatSDKRequestUiChatBot()
         {
         }
+
     }
 }

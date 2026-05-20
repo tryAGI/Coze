@@ -80,5 +80,6 @@ namespace Coze
         public EnterMessage()
         {
         }
+
     }
 }

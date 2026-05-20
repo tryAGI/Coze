@@ -158,5 +158,6 @@ namespace Coze
         public ChatV3Request()
         {
         }
+
     }
 }

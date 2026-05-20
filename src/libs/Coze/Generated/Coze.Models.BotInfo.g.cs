@@ -238,5 +238,6 @@ namespace Coze
         public BotInfo()
         {
         }
+
     }
 }
