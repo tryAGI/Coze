@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WorkflowExecuteHistory
     {
@@ -63,7 +63,7 @@ namespace Coze
         public string? ExecuteStatus { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interrupt_data")]
         public global::Coze.Interrupt? InterruptData { get; set; }
@@ -81,7 +81,7 @@ namespace Coze
         public string? Logid { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_execute_status")]
         public global::System.Collections.Generic.Dictionary<string, global::Coze.NodeExecuteStatus>? NodeExecuteStatus { get; set; }
@@ -105,7 +105,7 @@ namespace Coze
         public int? UpdateTime { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
         public global::Coze.Usage1? Usage { get; set; }

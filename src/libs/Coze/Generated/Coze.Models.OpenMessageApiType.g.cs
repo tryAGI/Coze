@@ -4,28 +4,28 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenMessageApiType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Answer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FunctionCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Question,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolResponse,
     }

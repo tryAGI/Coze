@@ -9,15 +9,15 @@ namespace Coze
     public enum PropertiesDataPropertiesBenefitInfoItemsPropertiesBasicPropertiesItemInfoStrategy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ByQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Forbidden,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unlimit,
     }

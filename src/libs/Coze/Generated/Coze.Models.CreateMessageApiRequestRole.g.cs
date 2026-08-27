@@ -9,11 +9,11 @@ namespace Coze
     public enum CreateMessageApiRequestRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

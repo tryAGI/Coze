@@ -4,44 +4,44 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum Emotion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Angry,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Coldness,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Excited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fear,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Happy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Neutral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Surprised,
     }

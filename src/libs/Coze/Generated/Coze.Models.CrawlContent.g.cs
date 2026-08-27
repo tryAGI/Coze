@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CrawlContent
     {
@@ -27,7 +27,7 @@ namespace Coze
         public global::System.Collections.Generic.Dictionary<string, string>? Marks { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pagination")]
         public global::Coze.Pagination? Pagination { get; set; }

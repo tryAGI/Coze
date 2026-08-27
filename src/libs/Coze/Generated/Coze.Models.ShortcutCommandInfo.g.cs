@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ShortcutCommandInfo
     {
@@ -57,7 +57,7 @@ namespace Coze
         public string? QueryTemplate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tool")]
         public global::Coze.ShortcutCommandToolInfo? Tool { get; set; }

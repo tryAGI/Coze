@@ -4,20 +4,20 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenAPIVoiceState
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cloned,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Init,
     }

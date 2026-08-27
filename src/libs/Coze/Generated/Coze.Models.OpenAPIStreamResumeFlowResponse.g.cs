@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenAPIStreamResumeFlowResponse
     {
@@ -27,7 +27,7 @@ namespace Coze
         public string? Cost { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("detail")]
         public global::Coze.ResponseDetail? Detail { get; set; }
@@ -39,7 +39,7 @@ namespace Coze
         public int? ErrorCode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error_message")]
         public string? ErrorMessage { get; set; }
@@ -63,7 +63,7 @@ namespace Coze
         public string? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interrupt_data")]
         public global::Coze.Interrupt? InterruptData { get; set; }
@@ -94,7 +94,7 @@ namespace Coze
         public string? NodeTitle { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
         public global::Coze.Usage1? Usage { get; set; }

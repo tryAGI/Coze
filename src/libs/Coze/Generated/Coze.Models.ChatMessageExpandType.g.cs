@@ -4,32 +4,32 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ChatMessageExpandType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DocumentRef,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EmbeddedMultimedia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Insertable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnowledgeCard,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Replaceable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unknown,
     }

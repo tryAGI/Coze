@@ -9,11 +9,11 @@ namespace Coze
     public enum ListMessageApiRequestOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

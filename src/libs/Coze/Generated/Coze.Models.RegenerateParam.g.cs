@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RegenerateParam
     {
@@ -15,7 +15,7 @@ namespace Coze
         public string? ChatId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message_id")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenSwitchBotDevelopModeRequestCollaborationMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Collaboration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Single,
     }

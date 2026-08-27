@@ -157,7 +157,7 @@ namespace Coze
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Coze.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

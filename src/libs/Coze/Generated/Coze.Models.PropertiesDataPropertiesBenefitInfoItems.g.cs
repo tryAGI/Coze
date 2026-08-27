@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PropertiesDataPropertiesBenefitInfoItems
     {
@@ -15,7 +15,7 @@ namespace Coze
         public global::Coze.PropertiesDataPropertiesBenefitInfoItemsPropertiesBasic? Basic { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("benefit_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.PropertiesDataPropertiesBenefitInfoItemsBenefitTypeJsonConverter))]
@@ -34,7 +34,7 @@ namespace Coze
         public global::System.Collections.Generic.IList<global::Coze.PropertiesDataPropertiesBenefitInfoItemsPropertiesExtraItems>? Extra { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resource_id")]
         public string? ResourceId { get; set; }

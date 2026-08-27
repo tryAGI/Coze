@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ShortcutSendType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Panel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Query,
     }

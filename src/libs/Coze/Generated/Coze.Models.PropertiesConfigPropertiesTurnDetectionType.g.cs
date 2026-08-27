@@ -9,19 +9,19 @@ namespace Coze
     public enum PropertiesConfigPropertiesTurnDetectionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClientInterrupt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClientVad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SemanticVad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServerVad,
     }

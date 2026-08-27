@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenAPIWorkflowMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chatflow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workflow,
     }

@@ -4,12 +4,12 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BotInfo
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("background_image_info")]
         public global::Coze.BackgroundImageInfo1? BackgroundImageInfo { get; set; }
@@ -21,7 +21,7 @@ namespace Coze
         public string? BotId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bot_mode")]
         public int? BotMode { get; set; }
@@ -51,13 +51,13 @@ namespace Coze
         public string? IconUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("knowledge")]
         public global::Coze.CommonKnowledge? Knowledge { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model_info")]
         public global::Coze.ModelInfo? ModelInfo { get; set; }
@@ -69,7 +69,7 @@ namespace Coze
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("onboarding_info")]
         public global::Coze.OnboardingInfoV2? OnboardingInfo { get; set; }
@@ -87,7 +87,7 @@ namespace Coze
         public global::System.Collections.Generic.IList<global::Coze.PluginInfo>? PluginInfoList { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt_info")]
         public global::Coze.PromptInfo? PromptInfo { get; set; }

@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AppTypeOpen
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Connector,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Normal,
     }

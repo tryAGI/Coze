@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateRule
     {
@@ -15,7 +15,7 @@ namespace Coze
         public int? UpdateInterval { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("update_type")]
         public int? UpdateType { get; set; }

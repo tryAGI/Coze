@@ -9,11 +9,11 @@ namespace Coze
     public enum CreateApiAppOpenRequestAppType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Connector,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Normal,
     }

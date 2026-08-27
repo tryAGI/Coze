@@ -9,11 +9,11 @@ namespace Coze
     public enum EnterMessage1ContentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ObjectString,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

@@ -4,56 +4,56 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TaskEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         App,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bot,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Database,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Imageflow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Knowledge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Plugin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prompt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shortcut,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trigger,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ui,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Variable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workflow,
     }

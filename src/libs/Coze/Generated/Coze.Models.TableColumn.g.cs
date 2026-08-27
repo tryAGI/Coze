@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TableColumn
     {
@@ -15,13 +15,13 @@ namespace Coze
         public string? ColumnName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("column_type")]
         public int? ColumnType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contains_empty_value")]
         public bool? ContainsEmptyValue { get; set; }

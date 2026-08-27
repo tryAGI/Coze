@@ -4,12 +4,12 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateDocumentOpenAPIAgwJsConv
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Str,
     }

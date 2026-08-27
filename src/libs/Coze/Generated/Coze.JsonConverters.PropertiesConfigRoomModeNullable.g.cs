@@ -20,7 +20,7 @@ namespace Coze.JsonConverters
                     {
                         return global::Coze.PropertiesConfigRoomModeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

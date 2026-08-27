@@ -4,42 +4,42 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatSDKRequestUi
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("asstBtn")]
         public global::Coze.ChatSDKRequestUiAsstBtn? AsstBtn { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("base")]
         public global::Coze.ChatSDKRequestUiBase? Base { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("chatBot")]
         public global::Coze.ChatSDKRequestUiChatBot? ChatBot { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversations")]
         public global::Coze.ChatSDKRequestUiConversations? Conversations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("footer")]
         public global::Coze.ChatSDKRequestUiFooter? Footer { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("header")]
         public global::Coze.ChatSDKRequestUiHeader? Header { get; set; }

@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PropertiesUsersItemsRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnterpriseAdmin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnterpriseMember,
     }
