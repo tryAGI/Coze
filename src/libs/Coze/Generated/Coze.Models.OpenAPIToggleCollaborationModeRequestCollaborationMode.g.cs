@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenAPIToggleCollaborationModeRequestCollaborationMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Collaboration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Single,
     }

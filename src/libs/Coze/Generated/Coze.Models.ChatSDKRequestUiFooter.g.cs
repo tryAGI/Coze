@@ -4,24 +4,24 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatSDKRequestUiFooter
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("expressionText")]
         public string? ExpressionText { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isShow")]
         public bool? IsShow { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("linkvars")]
         public object? Linkvars { get; set; }

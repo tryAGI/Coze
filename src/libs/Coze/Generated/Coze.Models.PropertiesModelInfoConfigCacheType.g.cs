@@ -9,11 +9,11 @@ namespace Coze
     public enum PropertiesModelInfoConfigCacheType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Closed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prefix,
     }

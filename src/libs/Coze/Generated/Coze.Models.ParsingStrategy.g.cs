@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ParsingStrategy
     {
@@ -21,7 +21,7 @@ namespace Coze
         public bool? ImageOcr { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parsing_type")]
         public int? ParsingType { get; set; }

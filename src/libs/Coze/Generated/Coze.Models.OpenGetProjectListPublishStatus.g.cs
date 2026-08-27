@@ -4,24 +4,24 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenGetProjectListPublishStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PublishedDraft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PublishedOnline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnpublishedDraft,
     }

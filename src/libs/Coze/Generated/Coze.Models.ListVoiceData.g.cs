@@ -4,18 +4,18 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ListVoiceData
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_more")]
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("voice_list")]
         public global::System.Collections.Generic.IList<global::Coze.OpenAPIVoiceData>? VoiceList { get; set; }

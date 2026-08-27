@@ -4,12 +4,12 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PropertiesPluginIdList
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id_list")]
         public global::System.Collections.Generic.IList<global::Coze.PropertiesPluginIdListPropertiesIdListItems>? IdList { get; set; }

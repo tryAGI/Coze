@@ -4,20 +4,20 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TaskStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Successful,
     }

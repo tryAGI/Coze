@@ -4,12 +4,12 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenSpaceMember
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.WorkspaceRoleTypeJsonConverter))]

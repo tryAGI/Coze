@@ -4,12 +4,12 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenSwitchBotDevelopModeRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("collaboration_mode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.OpenSwitchBotDevelopModeRequestCollaborationModeJsonConverter))]

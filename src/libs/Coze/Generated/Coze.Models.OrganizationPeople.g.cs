@@ -4,56 +4,56 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OrganizationPeople
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
         public string? AvatarUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         public int? CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_valid")]
         public bool? IsValid { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization_role_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.OrganizationPeopleOrganizationRoleTypeJsonConverter))]
         public global::Coze.OrganizationPeopleOrganizationRoleType? OrganizationRoleType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("people_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.OrganizationPeoplePeopleTypeJsonConverter))]
         public global::Coze.OrganizationPeoplePeopleType? PeopleType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user_id")]
         public string? UserId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user_nickname")]
         public string? UserNickname { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user_unique_name")]
         public string? UserUniqueName { get; set; }

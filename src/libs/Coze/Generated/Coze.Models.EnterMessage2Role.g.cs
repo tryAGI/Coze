@@ -9,11 +9,11 @@ namespace Coze
     public enum EnterMessage2Role
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

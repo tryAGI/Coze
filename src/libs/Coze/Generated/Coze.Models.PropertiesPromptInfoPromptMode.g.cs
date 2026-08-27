@@ -9,11 +9,11 @@ namespace Coze
     public enum PropertiesPromptInfoPromptMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prefix,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Standard,
     }

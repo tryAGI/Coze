@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateMessageApiRequestContentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ObjectString,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

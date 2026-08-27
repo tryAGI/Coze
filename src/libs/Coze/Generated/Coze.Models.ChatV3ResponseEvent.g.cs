@@ -4,48 +4,48 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ChatV3ResponseEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationAudioDelta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationChatCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationChatCreated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationChatFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationChatInProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationChatRequiresAction,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationMessageCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationMessageDelta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Done,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
     }

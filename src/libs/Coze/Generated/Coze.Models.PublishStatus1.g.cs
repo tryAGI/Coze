@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PublishStatus1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PublishedOnline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnpublishedDraft,
     }

@@ -4,18 +4,18 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PropertiesData
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("basic_info")]
         public global::Coze.PropertiesDataPropertiesBasicInfo? BasicInfo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("benefit_info")]
         public global::System.Collections.Generic.IList<global::Coze.PropertiesDataPropertiesBenefitInfoItems>? BenefitInfo { get; set; }

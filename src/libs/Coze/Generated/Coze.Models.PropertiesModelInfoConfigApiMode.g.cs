@@ -9,11 +9,11 @@ namespace Coze
     public enum PropertiesModelInfoConfigApiMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatApi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponsesApi,
     }

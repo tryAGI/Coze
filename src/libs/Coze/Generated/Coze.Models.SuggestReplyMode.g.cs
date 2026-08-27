@@ -4,20 +4,20 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SuggestReplyMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Customized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enable,
     }

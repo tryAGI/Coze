@@ -4,20 +4,20 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SpaceMemberJoinedStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Applied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Joined,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotJoined,
     }

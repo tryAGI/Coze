@@ -9,15 +9,15 @@ namespace Coze
     public enum PropertiesSuggestReplyInfoReplyMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Customized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enable,
     }

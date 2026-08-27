@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ModifyMessageApiRequest
     {
@@ -15,14 +15,14 @@ namespace Coze
         public string? Content { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.ModifyMessageApiRequestContentTypeJsonConverter))]
         public global::Coze.ModifyMessageApiRequestContentType? ContentType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("meta_data")]
         public global::System.Collections.Generic.Dictionary<string, string>? MetaData { get; set; }

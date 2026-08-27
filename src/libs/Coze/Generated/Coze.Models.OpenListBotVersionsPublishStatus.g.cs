@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenListBotVersionsPublishStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PublishedOnline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnpublishedDraft,
     }

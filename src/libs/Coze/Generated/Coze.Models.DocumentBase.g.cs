@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DocumentBase
     {
@@ -15,21 +15,21 @@ namespace Coze
         public string? Caption { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source_info")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Coze.SourceInfo SourceInfo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("update_rule")]
         public global::Coze.UpdateRule? UpdateRule { get; set; }

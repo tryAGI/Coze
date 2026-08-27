@@ -4,25 +4,25 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateBenefitLimitationRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("benefit_info")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Coze.PropertiesBenefitInfo BenefitInfo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_id")]
         public string? EntityId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_type")]
         [global::System.Text.Json.Serialization.JsonRequired]

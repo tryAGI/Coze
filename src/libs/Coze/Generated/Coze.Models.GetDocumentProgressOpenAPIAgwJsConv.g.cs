@@ -4,12 +4,12 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDocumentProgressOpenAPIAgwJsConv
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Str,
     }

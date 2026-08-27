@@ -4,19 +4,19 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateDocumentOpenAPIRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("chunk_strategy")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Coze.ChunkStrategy ChunkStrategy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataset_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -30,7 +30,7 @@ namespace Coze
         public required global::System.Collections.Generic.IList<global::Coze.DocumentBase> DocumentBases { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("format_type")]
         [global::System.Text.Json.Serialization.JsonRequired]

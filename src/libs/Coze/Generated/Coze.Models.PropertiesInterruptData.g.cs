@@ -9,13 +9,13 @@ namespace Coze
     public sealed partial class PropertiesInterruptData
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         public string? Data { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("event_id")]
         public string? EventId { get; set; }
@@ -27,7 +27,7 @@ namespace Coze
         public global::System.Collections.Generic.Dictionary<string, global::Coze.PropertiesInterruptDataPropertiesRequiredParametersAdditionalProperties>? RequiredParameters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public int? Type { get; set; }

@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenAPIAddWorkflowCollaboratorResponse
     {
@@ -15,7 +15,7 @@ namespace Coze
         public int? Code { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("detail")]
         public global::Coze.PropertiesDetail? Detail { get; set; }

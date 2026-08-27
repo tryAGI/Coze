@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenAPIEndReturnType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReturnVariables,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UseAnswerContent,
     }

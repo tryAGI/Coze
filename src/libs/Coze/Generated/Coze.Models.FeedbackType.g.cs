@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FeedbackType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Like,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unlike,
     }

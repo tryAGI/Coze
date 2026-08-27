@@ -4,28 +4,28 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PropertiesDataPropertiesBasicInfoUserLevel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enterprise,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Free,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProPersonal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Team,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V1ProInstance,
     }

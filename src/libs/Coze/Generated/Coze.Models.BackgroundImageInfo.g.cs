@@ -4,18 +4,18 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BackgroundImageInfo
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mobile_background_image")]
         public global::Coze.BackgroundImageDetail1? MobileBackgroundImage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("web_background_image")]
         public global::Coze.BackgroundImageDetail1? WebBackgroundImage { get; set; }

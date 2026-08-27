@@ -9,83 +9,83 @@ namespace Coze
     public enum PropertiesInterruptDataPropertiesRequiredParametersAdditionalPropertiesType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Array,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Code,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Doc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Excel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Image,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Integer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Number,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Object,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ppt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         String,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Svg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Txt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Video,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zip,
     }

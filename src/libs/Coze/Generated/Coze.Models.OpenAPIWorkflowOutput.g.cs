@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenAPIWorkflowOutput
     {
@@ -21,7 +21,7 @@ namespace Coze
         public global::System.Collections.Generic.Dictionary<string, global::Coze.OpenAPIParameter>? Parameters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("terminate_plan")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.OpenAPIEndReturnTypeJsonConverter))]

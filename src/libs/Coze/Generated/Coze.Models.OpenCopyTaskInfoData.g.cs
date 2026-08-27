@@ -4,12 +4,12 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenCopyTaskInfoData
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.TaskEntityTypeJsonConverter))]
@@ -22,31 +22,31 @@ namespace Coze
         public global::System.Collections.Generic.IList<global::Coze.TaskFailedReason>? FailedReasons { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source_entity_id")]
         public string? SourceEntityId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target_entity_id")]
         public string? TargetEntityId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target_workspace_id")]
         public string? TargetWorkspaceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("task_id")]
         public string? TaskId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("task_status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.TaskStatusJsonConverter))]

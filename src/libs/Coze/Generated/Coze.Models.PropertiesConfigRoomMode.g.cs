@@ -9,19 +9,19 @@ namespace Coze
     public enum PropertiesConfigRoomMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Podcast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S2s,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Translate,
     }

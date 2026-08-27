@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum VariableType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KVVariable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ListVariable,
     }

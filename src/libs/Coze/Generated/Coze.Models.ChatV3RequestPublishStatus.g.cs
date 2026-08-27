@@ -9,11 +9,11 @@ namespace Coze
     public enum ChatV3RequestPublishStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PublishedOnline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnpublishedDraft,
     }

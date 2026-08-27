@@ -4,24 +4,24 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatFlowRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("audio_config")]
         public global::Coze.AudioConfig? AudioConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avatar")]
         public global::Coze.AvatarConfig? Avatar { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("background_image_info")]
         public global::Coze.BackgroundImageInfo? BackgroundImageInfo { get; set; }
@@ -39,7 +39,7 @@ namespace Coze
         public string? Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public string? Id { get; set; }
@@ -51,7 +51,7 @@ namespace Coze
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("onboarding_info")]
         public global::Coze.OnboardingInfo? OnboardingInfo { get; set; }
@@ -63,19 +63,19 @@ namespace Coze
         public string? ProjectVersion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("suggest_reply_info")]
         public global::Coze.SuggestReplyInfo1? SuggestReplyInfo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user_input_config")]
         public global::Coze.UserInputConfig? UserInputConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workflow_id")]
         public string? WorkflowId { get; set; }

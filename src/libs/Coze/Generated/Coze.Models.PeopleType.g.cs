@@ -4,16 +4,16 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PeopleType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Employee,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Guest,
     }

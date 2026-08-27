@@ -4,7 +4,7 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenSpace
     {
@@ -39,7 +39,7 @@ namespace Coze
         public string? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("joined_status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Coze.JsonConverters.SpaceMemberJoinedStatusJsonConverter))]
@@ -52,7 +52,7 @@ namespace Coze
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner_uid")]
         public string? OwnerUid { get; set; }

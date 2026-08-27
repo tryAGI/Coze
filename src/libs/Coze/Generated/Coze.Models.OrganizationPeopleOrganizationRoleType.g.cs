@@ -4,24 +4,24 @@
 namespace Coze
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OrganizationPeopleOrganizationRoleType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrganizationAdmin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrganizationGuest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrganizationMember,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrganizationSuperAdmin,
     }
