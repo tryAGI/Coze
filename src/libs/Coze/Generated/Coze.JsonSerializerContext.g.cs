@@ -18,6 +18,7 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ConversationData>), TypeInfoPropertyName = "ListConversationData_System_Collections_Generic_List_global_Coze_ConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ResponseDetail))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
@@ -513,7 +514,6 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListWorkspaceScope?), TypeInfoPropertyName = "NullableListWorkspaceScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.SpaceMemberJoinedStatus?), TypeInfoPropertyName = "NullableSpaceMemberJoinedStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.WorkspaceRoleType?), TypeInfoPropertyName = "NullableWorkspaceRoleType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIEndReturnType?), TypeInfoPropertyName = "NullableOpenAPIEndReturnType2")]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -528,6 +528,7 @@ namespace Coze
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListConversationData), TypeInfoPropertyName = "ListConversationData_Coze_ListConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ConversationData>), TypeInfoPropertyName = "ListConversationData_System_Collections_Generic_List_global_Coze_ConversationData")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIEndReturnType?), TypeInfoPropertyName = "NullableOpenAPIEndReturnType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIParamType?), TypeInfoPropertyName = "NullableOpenAPIParamType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIParameterType?), TypeInfoPropertyName = "NullableOpenAPIParameterType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIWorkflowMode?), TypeInfoPropertyName = "NullableOpenAPIWorkflowMode2")]
