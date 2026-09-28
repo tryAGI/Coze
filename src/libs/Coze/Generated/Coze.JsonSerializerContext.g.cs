@@ -1,19 +1,14 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-#pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
-
 namespace Coze
 {
     /// <summary>
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListConversationData), TypeInfoPropertyName = "ListConversationData_Coze_ListConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ConversationData>), TypeInfoPropertyName = "ListConversationData_System_Collections_Generic_List_global_Coze_ConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
@@ -522,10 +517,8 @@ namespace Coze
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListConversationData), TypeInfoPropertyName = "ListConversationData_Coze_ListConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ConversationData>), TypeInfoPropertyName = "ListConversationData_System_Collections_Generic_List_global_Coze_ConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIEndReturnType?), TypeInfoPropertyName = "NullableOpenAPIEndReturnType2")]
