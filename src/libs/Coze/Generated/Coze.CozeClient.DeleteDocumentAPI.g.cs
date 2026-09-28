@@ -188,7 +188,7 @@ namespace Coze
                 PrepareDeleteDocumentAPIRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    agwJsConv: agwJsConv!,
+                    agwJsConv: agwJsConv,
                     request: request);
 
                 return __httpRequest;
@@ -211,7 +211,7 @@ namespace Coze
                                 pathTemplate: "\"/open_api/knowledge/document/delete\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -245,7 +245,7 @@ namespace Coze
                                 pathTemplate: "\"/open_api/knowledge/document/delete\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -286,7 +286,7 @@ namespace Coze
                                 pathTemplate: "\"/open_api/knowledge/document/delete\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -334,7 +334,7 @@ namespace Coze
                                 pathTemplate: "\"/open_api/knowledge/document/delete\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -356,7 +356,7 @@ namespace Coze
                                 pathTemplate: "\"/open_api/knowledge/document/delete\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

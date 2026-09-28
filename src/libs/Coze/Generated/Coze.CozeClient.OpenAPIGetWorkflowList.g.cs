@@ -164,7 +164,7 @@ namespace Coze
                                 defaultBaseUrl: "https://api.coze.com/"));
                             __pathBuilder
                                 .AddRequiredParameter("workspace_id", workspaceId)
-                                .AddRequiredParameter("page_num", pageNum.ToString()!)
+                                .AddRequiredParameter("page_num", pageNum.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
                                 .AddOptionalParameter("workflow_mode", workflowMode?.ToValueString())
                                 .AddOptionalParameter("app_id", appId)
@@ -210,8 +210,8 @@ namespace Coze
                 PrepareOpenAPIGetWorkflowListRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId!,
-                    pageNum: pageNum!,
+                    workspaceId: workspaceId,
+                    pageNum: pageNum,
                     pageSize: pageSize,
                     workflowMode: workflowMode,
                     appId: appId,
@@ -237,7 +237,7 @@ namespace Coze
                                 pathTemplate: "\"/v1/workflows\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -271,7 +271,7 @@ namespace Coze
                                 pathTemplate: "\"/v1/workflows\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -312,7 +312,7 @@ namespace Coze
                                 pathTemplate: "\"/v1/workflows\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -360,7 +360,7 @@ namespace Coze
                                 pathTemplate: "\"/v1/workflows\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -382,7 +382,7 @@ namespace Coze
                                 pathTemplate: "\"/v1/workflows\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
