@@ -12,7 +12,7 @@ namespace Coze
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("canvas_position")]
-        public global::Coze.CanvasPosition1? CanvasPosition { get; set; }
+        public global::Coze.CanvasPosition? CanvasPosition { get; set; }
 
         /// <summary>
         ///
@@ -49,7 +49,7 @@ namespace Coze
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public BackgroundImageDetail(
-            global::Coze.CanvasPosition1? canvasPosition,
+            global::Coze.CanvasPosition? canvasPosition,
             global::Coze.GradientPosition1? gradientPosition,
             string? imageUrl,
             string? themeColor)

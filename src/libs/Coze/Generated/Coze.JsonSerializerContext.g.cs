@@ -107,7 +107,7 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.Usage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ApiInfo))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.BackgroundImageDetail))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.CanvasPosition1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.CanvasPosition))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.GradientPosition1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.BackgroundImageInfo1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.BotConfig))]
@@ -175,7 +175,6 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.VoiceConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.AvatarConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.BackgroundImageDetail1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.CanvasPosition))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.GradientPosition))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.BackgroundImageInfo))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ChatFlowRole))]
@@ -509,6 +508,7 @@ namespace Coze
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.VariableType?), TypeInfoPropertyName = "NullableVariableType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListWorkspaceScope?), TypeInfoPropertyName = "NullableListWorkspaceScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.SpaceMemberJoinedStatus?), TypeInfoPropertyName = "NullableSpaceMemberJoinedStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.WorkspaceRoleType?), TypeInfoPropertyName = "NullableWorkspaceRoleType2")]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -521,7 +521,6 @@ namespace Coze
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.ListConversationData), TypeInfoPropertyName = "ListConversationData_Coze_ListConversationData")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Coze.ConversationData>), TypeInfoPropertyName = "ListConversationData_System_Collections_Generic_List_global_Coze_ConversationData")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.WorkspaceRoleType?), TypeInfoPropertyName = "NullableWorkspaceRoleType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIEndReturnType?), TypeInfoPropertyName = "NullableOpenAPIEndReturnType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIParamType?), TypeInfoPropertyName = "NullableOpenAPIParamType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Coze.OpenAPIParameterType?), TypeInfoPropertyName = "NullableOpenAPIParameterType2")]

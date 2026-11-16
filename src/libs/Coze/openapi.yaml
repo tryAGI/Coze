@@ -2088,7 +2088,7 @@ components:
     BackgroundImageDetail:
       properties:
         canvas_position:
-          $ref: '#/components/schemas/CanvasPosition1'
+          $ref: '#/components/schemas/CanvasPosition'
         gradient_position:
           $ref: '#/components/schemas/GradientPosition1'
         image_url:
@@ -2239,31 +2239,6 @@ components:
       x-coze-enum-names:
       - CACHE_TYPE_CLOSED
       - CACHE_TYPE_PREFIX
-    CanvasPosition1:
-      properties:
-        height:
-          format: double
-          title: 裁剪区域的高度，单位为像素（px）。此值决定了裁剪区域的垂直范围，必须为正数。
-          type: number
-          x-coze-example: 200
-        left:
-          format: double
-          title: 裁剪区域左侧距离画布左侧的偏移量，单位为像素（px）。值越大，裁剪区域越向右移动。
-          type: number
-          x-coze-example: 50
-        top:
-          format: double
-          title: '裁剪区域顶部距离画布顶部的偏移量，单位为像素（px）。值越大，裁剪区域越向下移动。
-
-            `top` 和 `left` 的值不能超过画布的实际尺寸'
-          type: number
-          x-coze-example: 100
-        width:
-          format: double
-          title: 裁剪区域的宽度，单位为像素（px）。此值决定了裁剪区域的水平范围，必须为正数。
-          type: number
-          x-coze-example: 300
-      type: object
     CommonKnowledge:
       properties:
         knowledge_infos:
@@ -3249,16 +3224,26 @@ components:
       properties:
         height:
           format: double
+          title: 裁剪区域的高度，单位为像素（px）。此值决定了裁剪区域的垂直范围，必须为正数。
           type: number
+          x-coze-example: 200
         left:
           format: double
+          title: 裁剪区域左侧距离画布左侧的偏移量，单位为像素（px）。值越大，裁剪区域越向右移动。
           type: number
+          x-coze-example: 50
         top:
           format: double
+          title: '裁剪区域顶部距离画布顶部的偏移量，单位为像素（px）。值越大，裁剪区域越向下移动。
+
+            `top` 和 `left` 的值不能超过画布的实际尺寸'
           type: number
+          x-coze-example: 100
         width:
           format: double
+          title: 裁剪区域的宽度，单位为像素（px）。此值决定了裁剪区域的水平范围，必须为正数。
           type: number
+          x-coze-example: 300
       type: object
     ChatFlowRole:
       properties:
